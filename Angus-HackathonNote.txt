@@ -1,0 +1,37 @@
+安裝pip
+安裝Danjo
+~失敗
+安裝wget
+安裝Django 1.3.1
+
+
+
+Project: 網路爬蟲＋管理介面網站
+============================
+Python
+Scrapy
+  request -> parse -> pipe line
+Manager
+  新增ＯＤ下載任務
+
+
+建立project  ODDashboard
+  django-admin.py startproject ODDashboard
+建立app  AirQuality
+  python manage.py startapp AirQuality
+將新增的AirQuality加入設定檔
+  mysite/settings.py  >  INSTALLED_APPS  >  'AirQuality'
+建立view
+使用template
+  設定static檔案路徑
+    css, js, font, image,...
+
+
+啟動Django
+  > python manage.py runserver
+Django主站
+  http://127.0.0.1:8000/
+把內建admin模組開放
+  註解取消
+建立App
+  > python manage.py startapp AirQuality
