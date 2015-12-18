@@ -1,0 +1,117 @@
+ODD資源網站整理
+=================
+template::
+  http://startbootstrap.com/template-overviews/sb-admin/
+Django::
+  https://djangogirlstaipei.gitbooks.io/django-girls-taipei-tutorial/content/index.html
+PLASH rethinkDB::
+  http://dev.plash.tw:8081
+ODD Homepage::
+  http://127.0.0.1:8000/ODD/odd-airquality.html
+ODD template::
+  http://127.0.0.1:8000/ODD/index.html
+GitLab::
+  http://git.plash.tw/fmhuang/ODD
+
+
+
+Django啟動方法
+=============
+進入專案資料夾::
+cd ODD
+啟動Django::
+python manage.py runserver
+
+
+
+ODD網站架構
+==========
+-[ODD]
+--.git
+--[AirQuality]
+---[static]   //放專案使用的靜態檔案
+----[css]   //css樣板
+----[font-awesome]   //字型
+----[image]   //圖片
+----[js]   //javascript
+-----[plugins]
+------[flot]
+------[morris]
+-------morris-data-odd.js  //圖的資料檔, Air Quality Data Stream Monitoring
+---[templates]
+----odd-airquality.html   //網頁檔, Air Quality
+----odd-transport.html   //網頁檔, Transport
+----odd-test.html   //網頁檔, test, 我測試用
+----test_realtime.py   //即時listen資料庫是否有抓取資料的動作
+---views.py  //view設定檔,宣告專案使用到的網頁介面
+--[ODD]
+---settings.py  //設定檔, Django伺服器設定
+---urls.py  //設定檔, 宣告專案使用到的網頁
+--AngusNote-OddProject.txt  //專案筆記
+
+
+
+ODD要顯示的資料
+=============
+task-name, current-state, download-frequency, http-error,
+total-size, eachtime-size,
+current-time, start-time, last-time, download-duration,
+
+
+RethinkDB查詢語法
+================
+http://dev.plash.tw:8081/#dataexplorer
+r.db("hackathon_DB").table("Error_log")
+r.db("hackathon_DB").table("Air_Q")
+
+
+
+Project: 網路爬蟲＋管理介面網站
+============================
+Python
+Scrapy
+  request -> parse -> pipe line
+Manager
+  新增ＯＤ下載任務
+
+
+
+Django專案建立法
+===============
+建立project  ODDashboard
+  django-admin.py startproject ODDashboard
+建立app  AirQuality
+  python manage.py startapp AirQuality
+將新增的AirQuality加入設定檔
+  mysite/settings.py  >  INSTALLED_APPS  >  'AirQuality'
+建立view
+使用template
+  設定static檔案路徑
+    css, js, font, image,...
+
+
+
+
+
+Django主站::
+http://127.0.0.1:8000/
+把內建admin模組開放
+  註解取消
+建立App
+  > python manage.py startapp AirQuality
+
+
+
+Gitlab使用方法
+=============
+git add *
+git commit -m "add all"
+git push -u origin master
+
+git status
+git add .
+git status
+git commit -m "my annotation..."
+git push --all
+
+git pull
