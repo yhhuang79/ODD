@@ -22,6 +22,7 @@ from AirQuality.views import hello_ODD,hello_charts,hello_tables,hello_forms,hel
 from AirQuality.views import hello_oddairquality,hello_oddtransport,hello_testcharts, hello_oddtest
 from AirQuality.views import hello_errordata
 from AirQuality.views import hello_realtime
+from AirQuality.views import hello_status
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -42,7 +43,8 @@ urlpatterns = [
     url(r'^ODD/odd-airquality.html$', hello_oddairquality),
     url(r'^ODD/odd-transport.html$', hello_oddtransport),
     url(r'^ODD/test-charts.html$', hello_testcharts),
-    url(r'^ODD/odd-test.html$', hello_oddtest)
+    url(r'^ODD/odd-test.html$', hello_oddtest),
+    url(r'^ODD/status/$', hello_status)
 ]
 
 # urlpatterns += staticfiles_urlpatterns() # angus'
