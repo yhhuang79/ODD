@@ -1,5 +1,12 @@
 from django.shortcuts import render
 from django.shortcuts import render_to_response
+from django.http import HttpResponse
+from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+import json
+import rethinkdb as r
+
 # Create your views here.
 
 #from django.http import HttpResponse
@@ -39,3 +46,10 @@ def hello_blankpage(request):
   return render_to_response('blank-page.html')
 def hello_indexrtl(request):
   return render_to_response('index-rtl.html')
+
+@api_view(['GET'])
+def hello_status(request):
+  if request.method == 'GET':
+    connection = r.connect(host='dev.plash.tw', port=28015)
+    oddstatus = list(r.db("hackathon_DB").table("Air_Q_show_infor").run(connection))
+    return HttpResponse(json.dumps(oddstatus),content_type="application/json")
