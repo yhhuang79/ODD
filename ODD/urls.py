@@ -44,6 +44,7 @@ urlpatterns = [
     url(r'^ODD/odd-transport.html$', hello_oddtransport),
     url(r'^ODD/test-charts.html$', hello_testcharts),
     url(r'^ODD/odd-test.html$', hello_oddtest),
+    url(r'^ODD/airquality$', hello_oddairquality),
     url(r'^ODD/status/$', hello_status)
 ]
 
