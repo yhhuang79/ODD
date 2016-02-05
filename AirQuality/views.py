@@ -47,6 +47,8 @@ def hello_blankpage(request):
   return render_to_response('blank-page.html')
 def hello_indexrtl(request):
   return render_to_response('index-rtl.html')
+def lass_map(request):
+  return render_to_response('lassmap.html')
 
 @api_view(['GET'])
 def hello_status(request):
@@ -61,7 +63,7 @@ def hello_status(request):
         oneTask['TaskStartTime'] = startTime[0]['Record_Start_Time']
         #print startTime[0]['Record_Start_Time']
         finishTime = r.db("hackathon_DB").table("Parse_Log").pluck("Task_Name","Task_URL","Task_Download_Frequency_(Seconds)","Record_Finish_Time").order_by(r.desc("Record_Finish_Time")).limit(1).run(connection)
-        #print finishTime
+        print finishTime
         oneTask['TaskFinishTime'] = finishTime[0]['Record_Finish_Time']
         oneTask['TaskURL'] = finishTime[0]['Task_URL']
         oneTask['TaskName'] = finishTime[0]['Task_Name']

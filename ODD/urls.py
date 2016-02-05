@@ -23,6 +23,7 @@ from AirQuality.views import hello_oddairquality,hello_oddtransport,hello_testch
 from AirQuality.views import hello_errordata
 from AirQuality.views import hello_realtime
 from AirQuality.views import hello_status
+from AirQuality.views import lass_map
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -45,6 +46,7 @@ urlpatterns = [
     url(r'^ODD/test-charts.html$', hello_testcharts),
     url(r'^ODD/odd-test.html$', hello_oddtest),
     url(r'^ODD/airquality$', hello_oddairquality),
+    url(r'^ODD/lass$', lass_map),
     url(r'^ODD/status/$', hello_status)
 ]
 
