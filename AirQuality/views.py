@@ -81,7 +81,7 @@ def lass_status(request):
     d = datetime.datetime.utcnow()
     epoch = datetime.datetime(1970,1,1)
     now = (d - epoch).total_seconds()
-    past = (d - epoch).total_seconds() - 3600
+    past = (d - epoch).total_seconds() - 60*60*24*30
     print now, past
-    lassstatus = list(r.db("Heat_Wave").table("LASS").has_fields("timestamp").filter(r.row["timestamp"] < now).limit(100).run(connection))
+    lassstatus = list(r.db("Heat_Wave").table("LASS").has_fields("timestamp").filter((r.row["timestamp"] < now) & (r.row["timestamp"] > past)).order_by(r.desc("timestamp")).limit(1000).run(connection))
     return HttpResponse(json.dumps(lassstatus),content_type="application/json")
