@@ -4,7 +4,8 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from datetime import datetime
+import datetime
+import time
 import json
 import rethinkdb as r
 
@@ -71,15 +72,16 @@ def hello_status(request):
         startTime = r.db("hackathon_DB").table("Parse_Log").pluck("Record__Time").order_by(r.asc("start_epoch")).limit(1)
         oneTask['status'] = list(r.db("hackathon_DB").table("Parse_Log").filter({"Task_Name": task['Task_Name']}).order_by(r.desc("start_epoch")).run(connection))
         oddstatus.append(oneTask)
-    #for status in oddstatus:
-    ## r.db("hackathon_DB").table("Parse_Log").getAll("air quailty",{index: "Task_Name"}).orderBy(r.desc("start_epoch"))
-    #    start_time = status['start_time']
-    #    start_time = start_time[18:len(start_time)-1]
-    #    stime = start_time.split(",")
-    #    status['start_time']=stime[0].strip()+"/"+ stime[1].strip()+"/"+stime[2].strip()+" "+stime[3].strip()+":"+stime[4].strip()+":"+stime[5].strip()
-    #    finish_time = status['finish_time']
-    #    finish_time = finish_time[18:len(finish_time)-1]
-    #    ftime = finish_time.split(",")
-    #    status['finish_time']=ftime[0].strip()+"/"+ ftime[1].strip()+"/"+ftime[2].strip()+" "+ftime[3].strip()+":"+ftime[4].strip()+":"+ftime[5].strip()
-
     return HttpResponse(json.dumps(oddstatus),content_type="application/json")
+
+@api_view(['GET'])
+def lass_status(request):
+  if request.method == 'GET':
+    connection = r.connect(host='dev.plash.tw', port=28015)
+    d = datetime.datetime.utcnow()
+    epoch = datetime.datetime(1970,1,1)
+    now = (d - epoch).total_seconds()
+    past = (d - epoch).total_seconds() - 3600
+    print now, past
+    lassstatus = list(r.db("Heat_Wave").table("LASS").has_fields("timestamp").filter(r.row["timestamp"] < now).limit(100).run(connection))
+    return HttpResponse(json.dumps(lassstatus),content_type="application/json")
