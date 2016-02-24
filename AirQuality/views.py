@@ -80,8 +80,9 @@ def lass_status(request):
     connection = r.connect(host='dev.plash.tw', port=28015)
     d = datetime.datetime.utcnow()
     epoch = datetime.datetime(1970,1,1)
-    now = (d - epoch).total_seconds()
-    past = (d - epoch).total_seconds() - 60*60*24*30
+    now = (d - epoch).total_seconds() - 8*60*60
+    past = now - 1*60
     print now, past
-    lassstatus = list(r.db("Heat_Wave").table("LASS").has_fields("timestamp").filter((r.row["timestamp"] < now) & (r.row["timestamp"] > past)).order_by(r.desc("timestamp")).limit(1000).run(connection))
+    lassstatus = list(r.db("Heat_Wave").table("LASS").has_fields("timestamp").filter((r.row["timestamp"] < now) & (r.row["timestamp"] > past)).order_by(r.desc("timestamp")).run(connection))
+    #print lassstatus
     return HttpResponse(json.dumps(lassstatus),content_type="application/json")

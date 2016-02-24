@@ -5,7 +5,7 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
 
     initialize: function(options) {
         var heatmapCfg = {
-            radius: 15,
+            radius: 20,
             maxOpacity: .8,
             scaleRadius: false,
             useLocalExtrema: false,
@@ -22,7 +22,7 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
             data: []
         };
         this._baseURL = this.options.baseURL || null;
-        this._period = this.options.period || "P1M";
+        this._period = this.options.period || "PT5S";
     },
 
     onAdd: function(map) {
@@ -76,7 +76,7 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
                     this._currentTimeData.data.push({
                         lat: parseFloat(gps_lat),
                         lng: parseFloat(gps_lon),
-                        count: 1
+                        count: marker.s_d0
                     });
                 }
             }
