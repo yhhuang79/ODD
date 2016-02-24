@@ -57,11 +57,25 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
             this._currentTimeData.data = [];
             for (var i = 0; i < data.length; i++) {
                 var marker = data[i];
-                console.log(JSON.stringify(marker));
+                //console.log(JSON.stringify(marker));
                 if (marker.gps_lat) {
+                    var gps_lat = marker.gps_lat;
+                    var gps_lon = marker.gps_lon;
+				            tmp = gps_lat - Math.floor(gps_lat);
+				            tmp = tmp / 60 * 100 * 100;
+				            tmp2 = tmp - Math.floor(tmp);
+				            tmp2 = tmp2 * 100;
+				            gps_lat = Math.floor(gps_lat) + Math.floor(tmp) * 0.01 + tmp2 * 0.0001;
+
+				            tmp = gps_lon - Math.floor(gps_lon);
+				            tmp = tmp / 60 * 100 * 100;
+				            tmp2 = tmp - Math.floor(tmp);
+				            tmp2 = tmp2 * 100;
+				            gps_lon = Math.floor(gps_lon) + Math.floor(tmp) * 0.01 + tmp2 * 0.0001;
+
                     this._currentTimeData.data.push({
-                        lat: parseFloat(marker.gps_lat),
-                        lng: parseFloat(marker.gps_lon),
+                        lat: parseFloat(gps_lat),
+                        lng: parseFloat(gps_lon),
                         count: 1
                     });
                 }
@@ -106,14 +120,15 @@ L.timeDimension.layer.sodaHeatMap = function(options) {
 
 var currentTime = new Date();
 currentTime.setUTCDate(1, 0, 0, 0, 0);
-
+console.log(currentTime.valueOf());
+var nowTime = new Date();
 var map = L.map('map', {
     zoom: 8,
     fullscreenControl: true,
     timeDimension: true,
     timeDimensionOptions: {
-        timeInterval: "2016-02-18/" + currentTime.toISOString(),
-        period: "P1M",
+        timeInterval: currentTime.toISOString() + "/" + nowTime.toISOString(),
+        period: "PT5S",
         currentTime: currentTime
     },
     center: [23.973875, 120.982024],
