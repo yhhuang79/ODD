@@ -1,5 +1,23 @@
 
 // Attibution: SODA API requests based on this example: https://github.com/chriswhong/soda-leaflet
+var station_data = [];
+function getAQI(){
+  $.getJSON("http://taiwanair.plash.tw/api/geojsonAQI", (function(data) {
+      station_data = [];
+      var stations = [];
+      L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+          stations.push({
+              lat: parseFloat(feature.properties.TWD97Lat),
+              lng: parseFloat(feature.properties.TWD97Lon),
+              count: feature.properties['PM2.5']
+          });
+        }
+      });
+      console.log(stations);
+      station_data = stations;
+  }));
+}
 
 L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
 
@@ -18,7 +36,7 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
         L.TimeDimension.Layer.prototype.initialize.call(this, layer, options);
         this._currentLoadedTime = 0;
         this._currentTimeData = {
-            max: this.options.heatmapMax || 10,
+            max: this.options.heatmapMax || 71,
             data: []
         };
         this._baseURL = this.options.baseURL || null;
@@ -51,6 +69,7 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
         if (!this._baseURL || !this._map) {
             return;
         }
+
         var url = this._constructQuery(time);
         $.getJSON(url, (function(data) {
             delete this._currentTimeData.data;
@@ -80,6 +99,10 @@ L.TimeDimension.Layer.SODAHeatMap = L.TimeDimension.Layer.extend({
                     });
                 }
             }
+            if(station_data.length > 0){
+              this._currentTimeData.data = this._currentTimeData.data.concat(station_data);
+            }
+
             this._currentLoadedTime = time;
             if (this._timeDimension && time == this._timeDimension.getCurrentTime() && !this._timeDimension.isLoading()) {
                 this._update();
@@ -117,10 +140,10 @@ L.timeDimension.layer.sodaHeatMap = function(options) {
 };
 
 
-
+getAQI();
+setInterval(function(){ getAQI() }, 1000*60*60);
 var currentTime = new Date();
 currentTime.setUTCDate(1, 0, 0, 0, 0);
-console.log(currentTime.valueOf());
 var nowTime = new Date();
 var map = L.map('map', {
     zoom: 8,

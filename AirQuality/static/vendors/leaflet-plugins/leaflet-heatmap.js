@@ -17,7 +17,7 @@ var HeatmapOverlay = L.Layer.extend({
     this.cfg = config;
     this._el = L.DomUtil.create('div', 'leaflet-zoom-hide');
     this._data = [];
-    this._max = 1;
+    this._max = 71;
     this._min = 0;
     this.cfg.container = this._el;
   },
@@ -39,7 +39,7 @@ var HeatmapOverlay = L.Layer.extend({
 
     if (!this._heatmap) {
       this._heatmap = h337.create(this.cfg);
-    } 
+    }
 
     // on zoom, reset origin
     map.on('viewreset', this._resetOrigin, this);
@@ -58,8 +58,8 @@ var HeatmapOverlay = L.Layer.extend({
   },
   _draw: function() {
     if (!this._map) { return; }
-    
-    var point = this._map.latLngToContainerPoint(this._origin);        
+
+    var point = this._map.latLngToContainerPoint(this._origin);
 
     // reposition the layer
     this._el.style[HeatmapOverlay.CSS_TRANSFORM] = 'translate(' +
@@ -86,7 +86,7 @@ var HeatmapOverlay = L.Layer.extend({
     var localMin = 0;
     var valueField = this.cfg.valueField;
     var len = this._data.length;
-  
+
     while (len--) {
       var entry = this._data[len];
       var value = entry[valueField];
@@ -130,12 +130,12 @@ var HeatmapOverlay = L.Layer.extend({
     var latField = this.cfg.latField || 'lat';
     var lngField = this.cfg.lngField || 'lng';
     var valueField = this.cfg.valueField || 'value';
-  
+
     // transform data to latlngs
     var data = data.data;
     var len = data.length;
     var d = [];
-  
+
     while (len--) {
       var entry = data[len];
       var latlng = new L.LatLng(entry[latField], entry[lngField]);
@@ -147,7 +147,7 @@ var HeatmapOverlay = L.Layer.extend({
       d.push(dataObj);
     }
     this._data = d;
-  
+
     this._draw();
   },
   // experimential... not ready.
@@ -164,7 +164,7 @@ var HeatmapOverlay = L.Layer.extend({
       var entry = pointOrArray;
       var latlng = new L.LatLng(entry[latField], entry[lngField]);
       var dataObj = { latlng: latlng };
-      
+
       dataObj[valueField] = entry[valueField];
       this._max = Math.max(this._max, dataObj[valueField]);
       this._min = Math.min(this._min, dataObj[valueField]);
@@ -179,7 +179,7 @@ var HeatmapOverlay = L.Layer.extend({
   _resetOrigin: function () {
     this._origin = this._map.layerPointToLatLng(new L.Point(0, 0));
     this._draw();
-  } 
+  }
 });
 
 HeatmapOverlay.CSS_TRANSFORM = (function() {
