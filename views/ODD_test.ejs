@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>This is the test page for real time ODD DB stream</title>
+    <!--<link rel='stylesheet' href='/stylesheets/style.css' />-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<h1><%= title %></h1>
-<p> Welcome to <%= title %></p>
+<h1>hackathon_DB_Parge_log_test</h1>
+<p> Welcome to ODD DB test page</p>
+<p> Record_Start_Time for test: <%= data[0]['Record_Finish_Time'] %> </p>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+    <tr>
+        <th>NO.</th>
+        <th>Task Name</th>
+        <th>HTML Status Code</th>
+        <th>Record Size (Bytes)</th>
+        <th>Record Start Time</th>
+        <th>Record Finish Time</th>
+        <th>Record Download Duration (Seconds)</th>
+    </tr>
+    </thead>
+    <tbody id="odd-table-content1">
+
+    <% data.forEach(function(row,index){ %>
+    <tr>
+        <th><%= index+1 %></th>
+        <th><%= row['Task_Name']  %></th>
+        <th><%= row['HTML_Status_Code'] %></th>
+        <th><%= row['Record_Size_(Bytes)'] %></th>
+        <th><%= row['Record_Start_Time'] %></th>
+        <th><%= row['Record_Finish_Time'] %>></th>
+        <th><%= row['Task_Download_Frequency_(Seconds)'] %></th>
+    </tr>
+    <% }); %>
+
+
+    </tbody>
+</table>
+
 </body>
 </html>
