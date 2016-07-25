@@ -9,8 +9,21 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var ODD_test = require('./routes/ODD_test');
 
-var app = express();
+var io = require('socket.io')();
+io.sockets.on('connection', function (socket) {
+  console.log('client connect');
+  // laborLive.WSConstruct(socket);
+  socket.on('ODD_test_js', function (data) {
+    // we tell the client to execute 'new message'
+    console.log('emit to html')
+    socket.broadcast.emit('update_DB_data', {
+      app_js: data
+    });
+  });
+});
 
+var app = express();
+app.io=io;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
