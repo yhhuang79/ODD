@@ -1,0 +1,57 @@
+<div class="col-xs-12">
+    <h1>hackathon_DB_Parge_log</h1>
+    <p> ODD DB test page</p>
+
+    <div class="table-responsive">
+        <div class="col-sm-6">
+            <table id="odd_air_quality_data_table" class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>NO.</th><th>Task Name</th><th>HTML Status Code</th><th>Record Size (Bytes)</th><th>Record Start Time</th><th>Record Finish Time</th><th>Frequency(Seconds)</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <% air_quality_data.forEach(function(row,index){ %>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td><%= row['Task_Name']  %></td>
+                    <td><%= row['HTML_Status_Code'] %></td>
+                    <td><%= row['Record_Size_(Bytes)'] %></td>
+                    <td><%= row['Record_Start_Time'] %></td>
+                    <td><%= row['Record_Finish_Time'] %></td>
+                    <td><%= row['Task_Download_Frequency_(Seconds)'] %></td>
+                </tr>
+                <% }); %>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-6">
+            <table id="odd_vd_traffic_data_table" class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>NO.</th><th>Task Name</th><th>HTML Status Code</th><th>Record Size (Bytes)</th><th>Record Start Time</th><th>Record Finish Time</th><th>Frequency(Seconds)</th>
+                </tr>
+                </thead>
+
+                <tbody>
+
+                <% vd_traffic_data.forEach(function(row,index){ %>
+                <tr>
+                    <td><%= index+1 %></td>
+                    <td><%= row['Task_Name']  %></td>
+                    <td><%= row['HTML_Status_Code'] %></td>
+                    <td><%= row['Record_Size_(Bytes)'] %></td>
+                    <td><%= row['Record_Start_Time'] %></td>
+                    <td><%= row['Record_Finish_Time'] %></td>
+                    <td><%= row['Task_Download_Frequency_(Seconds)'] %></td>
+                </tr>
+                <% }); %>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

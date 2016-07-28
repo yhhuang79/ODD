@@ -60,9 +60,9 @@ async.waterfall
         },
         function(air_quality_data, vd_traffic_data , callback_waterfall)
         {
-           // console.log(db_data);
+            // console.log(db_data);
             router.get('/', function(req, res, next) {
-                res.render('ODD_test', {
+                res.render('test_template', {
                     air_quality_data: air_quality_data,
                     vd_traffic_data: vd_traffic_data   });
                 callback_waterfall(null);
@@ -72,32 +72,7 @@ async.waterfall
 ); //async.waterfall
 
 
-var r = require('rethinkdb');
-var connection_socket = null;
-r.connect( {host: rethinkdbHost, port: 28015}, function(err, conn) {
-    if (err) throw err;
-    connection_socket = conn;
-    //laborLiveListener = laborLive.rethinkDbListener(r,connection);
 
-    var io = require('socket.io-client');
-    var socket = io.connect('http://localhost:3001', {reconnect: true});
-
-    r.db('hackathon_DB').table('Parse_Log').changes().run(connection_socket, function(err, cursor) {
-
-        cursor.each(function (err,item) {
-
-                //console.log(item);
-
-                console.log("from ODD_test.js to app.js!");
-                socket.emit('ODD_test_js', { ODD_test_js: item });
-
-                // console.log(item.new_val.dataset.Time);
-            }
-        );
-
-    });
-
-});
 
 
 

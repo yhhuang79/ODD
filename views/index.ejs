@@ -2,10 +2,43 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel='stylesheet' href='/stylesheets/style2.css' />
+      <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p> Welcome to <%= title %></p>
+
+  <div id="wrapper">
+    <div class="overlay"></div>
+
+    <% include templates/sidebar.ejs %>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+        <span class="hamb-top"></span>
+        <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+      </button>
+      <div class="container-fluid">
+        <div class="col-xs-0"></div>
+        <div class="col-xs-12">
+          <h1><%= title %></h1>
+          <p> <%= title %> page</p>
+        </div>
+        <div class="col-xs-0"></div>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <script type="text/javascript" src="javascripts/test_template.js"></script>
   </body>
 </html>

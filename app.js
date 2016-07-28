@@ -8,16 +8,18 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var ODD_test = require('./routes/ODD_test');
+var test_template = require('./routes/test_template');
 
 var io = require('socket.io')();
 io.sockets.on('connection', function (socket) {
   console.log('client connect');
   // laborLive.WSConstruct(socket);
-  socket.on('ODD_test_js', function (data) {
+  socket.on('ODD_test_js', function (new_data) {
     // we tell the client to execute 'new message'
-    console.log('emit to html')
+    console.log('from app.js to html')
+    //console.log(new_data);
     socket.broadcast.emit('update_DB_data', {
-      app_js: data
+      app_js: new_data
     });
   });
 });
@@ -39,6 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/ODD_test',ODD_test);
+app.use('/test_template',test_template);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
