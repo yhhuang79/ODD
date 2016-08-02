@@ -9,6 +9,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var ODD_test = require('./routes/ODD_test');
 var test_template = require('./routes/test_template');
+var tree_page = require('./routes/tree_page');
+var tree_configuration = require('./routes/tree_configuration');
 
 var io = require('socket.io')();
 io.sockets.on('connection', function (socket) {
@@ -42,6 +44,8 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/ODD_test',ODD_test);
 app.use('/test_template',test_template);
+app.use('/tree_page',tree_page);
+app.use('/tree_configuration',tree_configuration);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
