@@ -67,7 +67,7 @@ async.waterfall
                                 temp["children"].push(
                                         {
                                             "name":single_table_name,
-                                            "url":"http://www.iis.sinica.edu.tw/index_zh.html"
+                                            "url":"/test_template"
                                         }
                                     );
                                 callback_forEach_in();
