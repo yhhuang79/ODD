@@ -14,19 +14,14 @@ var tree_page2 = require('./routes/tree_page2');
 var tree_configuration = require('./routes/tree_configuration');
 
 
+
+var real_time_module = require("./module_js/real_time_module");
 var io = require('socket.io')();
 io.sockets.on('connection', function (socket) {
-  console.log('client connect');
-  // laborLive.WSConstruct(socket);
-  socket.on('ODD_test_js', function (new_data) {
-    // we tell the client to execute 'new message'
-    console.log('from app.js to html')
-    //console.log(new_data);
-    socket.broadcast.emit('update_DB_data', {
-      app_js: new_data
-    });
-  });
+  real_time_module.app_js_middle_receiver_and_thrower(socket,'ODD_test_js','update_DB_data');
 });
+
+
 
 var app = express();
 app.io=io;
@@ -49,6 +44,12 @@ app.use('/test_template',test_template);
 app.use('/tree_page',tree_page);
 app.use('/tree_page2',tree_page2)
 app.use('/tree_configuration',tree_configuration);
+
+
+
+
+
+
 
 
 // catch 404 and forward to error handler

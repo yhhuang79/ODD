@@ -18,17 +18,17 @@
         .node circle {
             fill: #fff;
             stroke: steelblue;
-            stroke-width: 1.5px;
+            stroke-width: 2px;
         }
 
         .node text {
-            font: 10px sans-serif;
+            font: 20px sans-serif;
         }
 
         .link {
             fill: none;
             stroke: #ccc;
-            stroke-width: 1.5px;
+            stroke-width: 5px;
         }
 
     </style>
@@ -68,12 +68,12 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-    var margin = {top: 20, right: 120, bottom: 20, left: 120},
-            width = 960 - margin.right - margin.left,
-            height = 800 - margin.top - margin.bottom;
+    var margin = {top: 0, right: 0, bottom: 0, left: 200},
+            width = 1960 - margin.right - margin.left,
+            height = 1600 - margin.top - margin.bottom;
 
     var i = 0,
-            duration = 750,
+            duration = 500,
             root;
 
     var tree = d3.layout.tree()
@@ -117,7 +117,7 @@
                 links = tree.links(nodes);
 
         // Normalize for fixed-depth.
-        nodes.forEach(function(d) { d.y = d.depth * 180; });
+        nodes.forEach(function(d) { d.y = d.depth * 300; });
 
         // Update the nodes…
         var node = svg.selectAll("g.node")
@@ -167,7 +167,7 @@
                 .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
 
         nodeUpdate.select("circle")
-                .attr("r", 4.5)
+                .attr("r", 7)
                 .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
 
         nodeUpdate.select("text")

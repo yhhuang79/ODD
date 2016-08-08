@@ -118,29 +118,29 @@
     {
         console.log('showing on html');
         console.log(new_data);
-        console.log(new_data['app_js']['ODD_test_js']['new_val'].Task_Name);
-        if(new_data['app_js']['ODD_test_js']['new_val']['Task_Name']=='air quailty')
+        console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
+        if(new_data['app_js']['thrower']['new_val']['Task_Name']=='air quailty')
         {
             $('#odd_air_quality_data_table tbody').prepend(
                     '<tr><td>'+0+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Task_Name']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['HTML_Status_Code']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Record_Size_(Bytes)']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Record_Start_Time']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Record_Finish_Time']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
             );
         }
-        else if(new_data['app_js']['ODD_test_js']['new_val']['Task_Name']=='vd_traffic')
+        else if(new_data['app_js']['thrower']['new_val']['Task_Name']=='vd_traffic')
         {
             $('#odd_vd_traffic_data_table tbody').prepend(
                     '<tr><td>'+0+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Task_Name']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['HTML_Status_Code']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Record_Size_(Bytes)']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Record_Start_Time']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Record_Finish_Time']+'</td>'+
-                    '<td>'+new_data['app_js']['ODD_test_js']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
             );
         }
     });
@@ -155,7 +155,7 @@
     {
         console.log('showing on html');
         console.log(new_data);
-        console.log(new_data['app_js']['ODD_test_js']['new_val'].Task_Name);
+        console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
         counter++;
     });
     setInterval(function() {

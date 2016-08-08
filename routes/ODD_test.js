@@ -73,6 +73,7 @@ async.waterfall
 
 
 
+var real_time_module = require("../module_js/real_time_module");
 
 //real time update
 var r = require('rethinkdb');
@@ -80,33 +81,7 @@ var connection_socket = null;
 r.connect( {host: rethinkdbHost, port: 28015}, function(err, conn) {
     if (err) throw err;
     connection_socket = conn;
-    //laborLiveListener = laborLive.rethinkDbListener(r,connection);
-
-    var io = require('socket.io-client');
-    var socket = io.connect('http://localhost:3001', {reconnect: true});
-
-    r.db('hackathon_DB').table('Parse_Log').changes().run(connection_socket, function(err, cursor) {
-
-        // test warning system
-        var w=0;
-        warning_machine=setInterval(function(){console.log("no data input test: "+w++)},10000);
-
-        cursor.each(function (err,item) {
-
-                clearTimeout(warning_machine);
-                w=0;
-                warning_machine=setInterval(function(){console.log("no data input test: "+w++)},10000);
-
-
-                //console.log(item);
-                console.log("from ODD_test.js to app.js!");
-                socket.emit('ODD_test_js', { ODD_test_js: item });
-
-                // console.log(item.new_val.dataset.Time);
-            }
-        );
-
-    });
+    real_time_module.real_time_change_listener(connection_socket,'hackathon_DB','Parse_Log','ODD_test_js');
 
 });
 
