@@ -73,17 +73,17 @@ async.waterfall
 
 
 
-var real_time_module = require("../module_js/real_time_module");
-
-//real time update
-var r = require('rethinkdb');
-var connection_socket = null;
-r.connect( {host: rethinkdbHost, port: 28015}, function(err, conn) {
-    if (err) throw err;
-    connection_socket = conn;
-    real_time_module.real_time_change_listener(connection_socket,'hackathon_DB','Parse_Log','ODD_test_js');
-
-});
+// var real_time_module = require("../module_js/real_time_module");
+//
+// //real time update
+// var r = require('rethinkdb');
+// var connection_socket = null;
+// r.connect( {host: rethinkdbHost, port: 28015}, function(err, conn) {
+//     if (err) throw err;
+//     connection_socket = conn;
+//     real_time_module.real_time_change_listener(connection_socket,'hackathon_DB','Parse_Log','ODD_test_js');
+//
+// });
 
 
 

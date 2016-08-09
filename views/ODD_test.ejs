@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,124 +12,124 @@
 
 </head>
 <body>
-    <div id="wrapper">
-        <div class="overlay"></div>
+<div id="wrapper">
+    <div class="overlay"></div>
 
-        <% include templates/sidebar.ejs %>
+    <% include templates/sidebar.ejs %>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-                <span class="hamb-top"></span>
-                <span class="hamb-middle"></span>
-                <span class="hamb-bottom"></span>
-            </button>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-0"></div>
-                    <div class="col-xs-12">
-                        <h1>hackathon_DB_Parge_log</h1>
-                        <p> ODD DB test page</p>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-0"></div>
+                <div class="col-xs-12">
+                    <h1>hackathon_DB_Parge_log</h1>
+                    <p> ODD DB test page</p>
 
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <table id="odd_air_quality_data_table" class="table table-bordered table-hover table-striped table-condensed">
-                                    <thead>
-                                    <tr>
-                                        <th>NO.</th><th>Task Name</th><th>HTML Status Code</th><th>Record Size (Bytes)</th><th>Record Start Time</th><th>Record Finish Time</th><th>Frequency(Seconds)</th>
-                                    </tr>
-                                    </thead>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table id="odd_air_quality_data_table" class="table table-bordered table-hover table-striped table-condensed">
+                                <thead>
+                                <tr>
+                                    <th>NO.</th><th>Task Name</th><th>HTML Status Code</th><th>Record Size (Bytes)</th><th>Record Start Time</th><th>Record Finish Time</th><th>Frequency(Seconds)</th>
+                                </tr>
+                                </thead>
 
-                                    <tbody>
+                                <tbody>
 
-                                    <% air_quality_data.forEach(function(row,index){ %>
-                                    <tr>
-                                        <td><%= index+1 %></td>
-                                        <td><%= row['Task_Name']  %></td>
-                                        <td><%= row['HTML_Status_Code'] %></td>
-                                        <td><%= row['Record_Size_(Bytes)'] %></td>
-                                        <td><%= row['Record_Start_Time'] %></td>
-                                        <td><%= row['Record_Finish_Time'] %></td>
-                                        <td><%= row['Task_Download_Frequency_(Seconds)'] %></td>
-                                    </tr>
-                                    <% }); %>
+                                <% air_quality_data.forEach(function(row,index){ %>
+                                <tr>
+                                    <td><%= index+1 %></td>
+                                    <td><%= row['Task_Name']  %></td>
+                                    <td><%= row['HTML_Status_Code'] %></td>
+                                    <td><%= row['Record_Size_(Bytes)'] %></td>
+                                    <td><%= row['Record_Start_Time'] %></td>
+                                    <td><%= row['Record_Finish_Time'] %></td>
+                                    <td><%= row['Task_Download_Frequency_(Seconds)'] %></td>
+                                </tr>
+                                <% }); %>
 
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-sm-6">
-                                <table id="odd_vd_traffic_data_table" class="table table-bordered table-hover table-striped table-condensed ">
-                                    <thead>
-                                    <tr>
-                                        <th>NO.</th><th>Task Name</th><th>HTML Status Code</th><th>Record Size (Bytes)</th><th>Record Start Time</th><th>Record Finish Time</th><th>Frequency(Seconds)</th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-
-                                    <% vd_traffic_data.forEach(function(row,index){ %>
-                                    <tr>
-                                        <td><%= index+1 %></td>
-                                        <td><%= row['Task_Name']  %></td>
-                                        <td><%= row['HTML_Status_Code'] %></td>
-                                        <td><%= row['Record_Size_(Bytes)'] %></td>
-                                        <td><%= row['Record_Start_Time'] %></td>
-                                        <td><%= row['Record_Finish_Time'] %></td>
-                                        <td><%= row['Task_Download_Frequency_(Seconds)'] %></td>
-                                    </tr>
-                                    <% }); %>
-
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
+                        <div class="col-sm-6">
+                            <table id="odd_vd_traffic_data_table" class="table table-bordered table-hover table-striped table-condensed ">
+                                <thead>
+                                <tr>
+                                    <th>NO.</th><th>Task Name</th><th>HTML Status Code</th><th>Record Size (Bytes)</th><th>Record Start Time</th><th>Record Finish Time</th><th>Frequency(Seconds)</th>
+                                </tr>
+                                </thead>
 
+                                <tbody>
+
+                                <% vd_traffic_data.forEach(function(row,index){ %>
+                                <tr>
+                                    <td><%= index+1 %></td>
+                                    <td><%= row['Task_Name']  %></td>
+                                    <td><%= row['HTML_Status_Code'] %></td>
+                                    <td><%= row['Record_Size_(Bytes)'] %></td>
+                                    <td><%= row['Record_Start_Time'] %></td>
+                                    <td><%= row['Record_Finish_Time'] %></td>
+                                    <td><%= row['Task_Download_Frequency_(Seconds)'] %></td>
+                                </tr>
+                                <% }); %>
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="col-xs-0"></div>
+
                 </div>
+                <div class="col-xs-0"></div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
 
 
-    <script type="text/javascript" src="javascripts/test_template.js"></script>
-    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-    <script>
-        var socket = io.connect('http://localhost:3001');
-        socket.on('update_DB_data',function(new_data)
+<script type="text/javascript" src="javascripts/test_template.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script>
+    var socket = io.connect('http://localhost:3001');
+    socket.on('update_DB_data',function(new_data)
+    {
+        console.log('showing on html');
+        console.log(new_data);
+        console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
+        if(new_data['app_js']['thrower']['new_val']['Task_Name']=='air quailty')
         {
-            console.log('showing on html');
-            console.log(new_data);
-            console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
-            if(new_data['app_js']['thrower']['new_val']['Task_Name']=='air quailty')
-            {
-                $('#odd_air_quality_data_table tbody').prepend(
-                        '<tr><td>'+0+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
-                );
-            }
-            else if(new_data['app_js']['thrower']['new_val']['Task_Name']=='vd_traffic')
-            {
-                $('#odd_vd_traffic_data_table tbody').prepend(
-                        '<tr><td>'+0+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
-                        '<td>'+new_data['app_js']['thrower']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
-                );
-            }
-        });
-    </script>
+            $('#odd_air_quality_data_table tbody').prepend(
+                    '<tr><td>'+0+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
+            );
+        }
+        else if(new_data['app_js']['thrower']['new_val']['Task_Name']=='vd_traffic')
+        {
+            $('#odd_vd_traffic_data_table tbody').prepend(
+                    '<tr><td>'+0+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
+                    '<td>'+new_data['app_js']['thrower']['new_val']['Task_Download_Frequency_(Seconds)']+'</td></tr>'
+            );
+        }
+    });
+</script>
 
 </body>
 </html>

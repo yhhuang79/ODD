@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test module one for all</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style2.css' />
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <% include templates/sidebar.ejs %>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container-fluid">
+            <div class="col-xs-"></div>
+            <div class="col-xs-12">
+                <h1>Database: <%= database_name %></h1>
+                <h2> Table: <%= table_name %></h2>
+
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <h1>Test data stream</h1>
+                        <p id="test_flow_board">
+                            testing.....
+                        <div id="container_flow_stream" style="height: 400px; min-width: 310px"></div>
+                        </p>
+
+                        <table id="odd_data_table" class="table table-bordered table-hover table-striped table-condensed">
+
+                            <thead>
+                            <tr>
+                                <%  header.forEach(function(one_head,index){ %>
+                                <td><%= one_head %></td>
+                               <% }); %>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <% data.forEach(function(row,index){ %>
+                                <tr>
+                                    <% for(var x in row){ %>
+                                    <td><%= row[x] %></td>
+                                    <% }; %>
+                                </tr>
+                            <% }); %>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-0"></div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<script type="text/javascript" src="../../javascripts/test_template.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script>
+
+    function offer_attribute(obj){
+        var attr_list = Object.keys(obj);
+        return attr_list;
+    }
+
+    var socket = io.connect('http://localhost:3001');
+    socket.on('update_test_data',function(new_data)
+    {
+        console.log('showing on html test');
+        console.log(new_data);
+        console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
+        var header = offer_attribute(new_data['app_js']['thrower']['new_val']);
+
+        if(new_data['app_js']['thrower']['new_val'].Task_Name=="vd_traffic")
+        {
+            $('#odd_data_table tbody').prepend(
+
+                '<tr><td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
+                '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
+                '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
+                '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
+                '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
+                '<td>'+new_data['app_js']['thrower']['new_val']['id']+'</td></tr>'
+            );
+        }
+
+
+    });
+</script>
+
+<!--real time data flow and counter-->
+<script>
+
+    var counter=0;
+    var socket = io.connect('http://localhost:3001');
+    socket.on('update_test_data',function(new_data)
+    {
+        console.log('showing on html');
+        console.log(new_data);
+        console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
+        counter++;
+    });
+    //    setInterval(function() {
+    //        $('#test_flow_board').append('<span style="font-size:'+2+counter+'pt">'+counter+'</span>');
+    //        //counter=0;
+    //
+    //    }, 1000);
+
+</script>
+
+<!--real time chart(use "counter" variable above)-->
+<script>
+    $(function () {
+
+        Highcharts.setOptions({
+            global : {
+                useUTC : false
+            }
+        });
+
+        // Create the chart
+        $('#container_flow_stream').highcharts('StockChart', {
+            chart : {
+                events : {
+                    load : function () {
+
+                        // set up the updating of the chart each second
+                        var series = this.series[0];
+                        setInterval(function () {
+                            var x = (new Date()).getTime(), // current time
+                                    y = counter;
+                            series.addPoint([x, y], true, true);
+                            counter=0;
+                        }, 1000);
+                    }
+                }
+            },
+
+            rangeSelector: {
+                buttons: [{
+                    count: 1,
+                    type: 'minute',
+                    text: '1M'
+                }, {
+                    count: 5,
+                    type: 'minute',
+                    text: '5M'
+                }, {
+                    type: 'all',
+                    text: 'All'
+                }],
+                inputEnabled: false,
+                selected: 0
+            },
+
+            title : {
+                text : 'Live data'
+            },
+
+            exporting: {
+                enabled: false
+            },
+
+            series : [{
+                name : 'DB data',
+                data : (function () {
+                    // generate an array of random data
+                    var data = [], time = (new Date()).getTime(), i;
+
+                    for (i = -9990; i <= 0; i += 1) {
+                        data.push([
+                            time + i * 1000,
+                            //Math.round(Math.random() * 100)
+                            0
+                        ]);
+                    }
+                    return data;
+                }())
+            }]
+        });
+
+    });
+</script>
+
+
+</body>
+</html>

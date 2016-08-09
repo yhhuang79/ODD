@@ -15,7 +15,7 @@ var table_attr_list_module= require("../module_js/table_attr_list_module");
 table_attr_list_module.table_attr_list('AQI_inference','pm25_one_week',
     function(result)
     {
-        console.log("results: ",JSON.stringify(result[0],null,'\t'));
+        console.log("results: ",JSON.stringify(result,null,'\t'));
         //console.log("finish")
     }
 );

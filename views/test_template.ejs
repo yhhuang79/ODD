@@ -113,6 +113,7 @@
 <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 <!--real time table receiver-->
 <script>
+    var count_row=0;
     var socket = io.connect('http://localhost:3001');
     socket.on('update_DB_data',function(new_data)
     {
@@ -122,7 +123,7 @@
         if(new_data['app_js']['thrower']['new_val']['Task_Name']=='air quailty')
         {
             $('#odd_air_quality_data_table tbody').prepend(
-                    '<tr><td>'+0+'</td>'+
+                    '<tr><td>'+(count_row--)+'</td>'+
                     '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
                     '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
                     '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
@@ -134,7 +135,7 @@
         else if(new_data['app_js']['thrower']['new_val']['Task_Name']=='vd_traffic')
         {
             $('#odd_vd_traffic_data_table tbody').prepend(
-                    '<tr><td>'+0+'</td>'+
+                    '<tr><td>'+(count_row--)+'</td>'+
                     '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
                     '<td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
                     '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
@@ -146,7 +147,7 @@
     });
 </script>
 
-<!--real time data flow-->
+<!--real time data flow and counter-->
 <script>
 
     var counter=0;
@@ -158,11 +159,11 @@
         console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
         counter++;
     });
-    setInterval(function() {
-        $('#test_flow_board').append('<span style="font-size:'+2+counter+'pt">'+counter+'</span>');
-        //counter=0;
-
-    }, 1000);
+//    setInterval(function() {
+//        $('#test_flow_board').append('<span style="font-size:'+2+counter+'pt">'+counter+'</span>');
+//        //counter=0;
+//
+//    }, 1000);
 
 </script>
 

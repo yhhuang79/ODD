@@ -13,13 +13,13 @@ module.exports =
 
             // test warning system
             var w=0;
-            warning_machine=setInterval(function(){console.log("no data input test: "+ w++ )},1000);
+            warning_machine=setInterval(function(){console.log("no data input test: "+ w++ )},10000);
 
             cursor.each(function (err,item) {
 
                     clearTimeout(warning_machine);
                     w=0;
-                    warning_machine=setInterval(function(){console.log("no data input test: "+w++)},1000);
+                    warning_machine=setInterval(function(){console.log("no data input test: "+w++)},10000);
                     //console.log(item);
 
                     console.log('From database:',database_name,'and table:',table_name,'----------------------------------------------------');
@@ -35,13 +35,13 @@ module.exports =
 
     app_js_middle_receiver_and_thrower:function(socket,receive_channel_name,throw_channel_name)
     {
-        console.log('client connect from module');
+        console.log('real time module connected!');
         // laborLive.WSConstruct(socket);
         socket.on(receive_channel_name, function (new_data) {
             // we tell the client to execute 'new message'
             console.log('2.received data in app.js by channel:',receive_channel_name);
             console.log('3.emit data in app.js to html by channel:',throw_channel_name);
-            console.log('-----------------------------------------------------------------------------------------------------');
+            console.log('-----------------------------------------------------------------------------------------------------\n');
             //console.log('from '+receive_channel_name+' in app.js to html')
             //console.log(new_data);
             socket.broadcast.emit(throw_channel_name, {

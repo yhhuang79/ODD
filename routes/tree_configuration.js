@@ -110,7 +110,7 @@ async.waterfall
                     router.get('/', function(req, res, next) {
                         //console.log(JSON.stringify(tree_configuration));
                         //res.send(JSON.stringify(tree_configuration));
-                        res.send(JSON.stringify(db_config));
+                        res.send(JSON.stringify(db_config,null,' '));
                     });
 
                     callback_waterfall(null);
