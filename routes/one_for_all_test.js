@@ -92,19 +92,20 @@ router.get('/:database/:table', function(req, res, next) {
             },
             function(header,data, callback_waterfall)
             {
-                console.log(header);
-                console.log(data);
+                //console.log(header);
+                //console.log(data);
 
                 if(header==null)
                 {
-                    res.render('one_for_all_test',
-                        {
-                            database_name:database_name,
-                            table_name:table_name,
-                            header:["not exist"],
-                            data: []
-                        });
+                    // res.render('one_for_all_test',
+                    //     {
+                    //         database_name:database_name,
+                    //         table_name:table_name,
+                    //         header:["not exist"],
+                    //         data: []
+                    //     });
 
+                    res.status(404).send('Sorry!! Database:'+database_name+' or table:'+table_name+' is not found!!!');
                     callback_waterfall(null);
                 }
                 else

@@ -20,3 +20,8 @@ table_attr_list_module.table_attr_list('AQI_inference','pm25_one_week',
     }
 );
 
+
+
+
+// var xxx=[1,2,3];
+// console.log(xxx.length);

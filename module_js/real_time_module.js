@@ -1,30 +1,61 @@
 //module experiment
 var r = require('rethinkdb');
 var rethinkdbHost = "140.109.18.136";
-
+var warning_machine=null;
 
 module.exports =
 {
-    real_time_change_listener:function(connection_socket,database_name,table_name,channel_name)
+    real_time_change_listener:function(connection_socket, database_name, table_name, throw_channel_name, warning_period)
     {
         var io = require('socket.io-client');
         var socket = io.connect('http://localhost:3001', {reconnect: true});
         r.db(database_name).table(table_name).changes().run(connection_socket, function(err, cursor) {
 
             // test warning system
-            var w=0;
-            warning_machine=setInterval(function(){console.log("no data input test: "+ w++ )},10000);
 
-            cursor.each(function (err,item) {
+            var period=warning_period;
 
-                    clearTimeout(warning_machine);
-                    w=0;
-                    warning_machine=setInterval(function(){console.log("no data input test: "+w++)},10000);
-                    //console.log(item);
+            // var w=1;
+            // warning_machine=setInterval(function(){console.log("no data input test for "+ (w++*(period/1000)) +" sec from database: "+database_name+"table: "+table_name)},period);
 
-                    console.log('From database:',database_name,'and table:',table_name,'----------------------------------------------------');
-                    console.log("1.emit changed data to app.js by channel:",channel_name);
-                    socket.emit(channel_name, { thrower: item });
+            var timer=null;
+            function warning_machine(period,database_name,table_name)
+            {
+                var w=1;
+                timer=setInterval(
+                    function()
+                    {
+                        console.log("no data input test for "+ (w++*(period/1000)) +" sec from database: "+database_name,"table: "+table_name);
+                    }
+                    ,period);
+            }
+
+            if(period!=null)
+            {
+                warning_machine(period,database_name,table_name);
+            }
+
+
+            cursor.each(function (err,item)
+                {
+                    console.log('\nFrom database:',database_name,'and table:',table_name,'----------------------------------------------------');
+                    console.log("1.emit changed data to app.js by channel:",throw_channel_name);
+                    socket.emit(throw_channel_name, { thrower: item });
+
+
+                    //clearTimeout(timer);
+                    //warning_machine(period,database_name,table_name);
+
+                    if(period!=null)
+                    {
+                        clearTimeout(timer);
+                        warning_machine(period,database_name,table_name);
+                    }
+
+                    // clearTimeout(warning_machine);
+                    // w=1;
+                    // warning_machine=setInterval(function(){console.log("no data input test for "+ (w++*(period/1000)) +" sec from database: "+database_name+"table: "+table_name)},period);
+
 
                     // console.log(item.new_val.dataset.Time);
                 }

@@ -85,26 +85,24 @@
         return attr_list;
     }
 
-    var socket = io.connect('http://localhost:3001');
-    socket.on('update_test_data',function(new_data)
+    var socket = io.connect(location.origin);
+    socket.on( location.pathname, function(new_data)
     {
-        console.log('showing on html test');
-        console.log(new_data);
-        console.log(new_data['app_js']['thrower']['new_val'].Task_Name);
-        var header = offer_attribute(new_data['app_js']['thrower']['new_val']);
+        console.log('showing on html test:',new_data);
 
-        if(new_data['app_js']['thrower']['new_val'].Task_Name=="vd_traffic")
+        var headers = offer_attribute(new_data['app_js']['thrower']['new_val']);
+        console.log("headers:",headers);
+
+        var update_row_data=null;
+        update_row_data='<tr>';
+        for(var index in headers)
         {
-            $('#odd_data_table tbody').prepend(
-
-                '<tr><td>'+new_data['app_js']['thrower']['new_val']['HTML_Status_Code']+'</td>'+
-                '<td>'+new_data['app_js']['thrower']['new_val']['Record_Finish_Time']+'</td>'+
-                '<td>'+new_data['app_js']['thrower']['new_val']['Record_Size_(Bytes)']+'</td>'+
-                '<td>'+new_data['app_js']['thrower']['new_val']['Record_Start_Time']+'</td>'+
-                '<td>'+new_data['app_js']['thrower']['new_val']['Task_Name']+'</td>'+
-                '<td>'+new_data['app_js']['thrower']['new_val']['id']+'</td></tr>'
-            );
+            update_row_data=update_row_data+'<td>'+new_data['app_js']['thrower']['new_val'][headers[index]]+'</td>'
         }
+        update_row_data=update_row_data+'</tr>'
+
+
+        $('#odd_data_table tbody').prepend(update_row_data);
 
 
     });
@@ -114,8 +112,8 @@
 <script>
 
     var counter=0;
-    var socket = io.connect('http://localhost:3001');
-    socket.on('update_test_data',function(new_data)
+    var socket = io.connect(location.origin);
+    socket.on(location.pathname,function(new_data)
     {
         console.log('showing on html');
         console.log(new_data);
