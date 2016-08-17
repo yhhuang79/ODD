@@ -3,13 +3,13 @@
     {"database":"test",
       "table":"real_time_test",
       "throw_channel_name1":"real_time_test",
-      "period":1000,
+      "period":null,
       "receive_channel_name":"real_time_test",
       "throw_channel_name2":"/inspect/test/real_time_test"},
     {"database":"hackathon_DB",
       "table":"Parse_Log",
       "throw_channel_name1":"Parse_Log",
-      "period":1000,
+      "period":null,
       "receive_channel_name":"Parse_Log",
       "throw_channel_name2":"/inspect/hackathon_DB/Parse_Log"}
   ]

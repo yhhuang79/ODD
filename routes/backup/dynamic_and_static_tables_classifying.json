@@ -1,0 +1,745 @@
+{
+ "RethinkDB": {
+  "dynamic table": [
+   {
+    "database": "Heat_Wave",
+    "table": "LASS_API",
+    "throw_channel_name1": "LASS_API",
+    "period": "300",
+    "receive_channel_name": "LASS_API",
+    "throw_channel_name2": "/inspect/Heat_Wave/LASS_API",
+    "documents": 977311,
+    "update_timing_record": [
+     "1471401762",
+     "1471401462",
+     "1471401162",
+     "1471400862",
+     "1471400562",
+     "1471400262",
+     "1471399961",
+     "1471399661",
+     "1471399362",
+     "1471399062",
+     "1471398761",
+     "1471398462",
+     "1471398162",
+     "1471397861",
+     "1471397561",
+     "1471397261",
+     "1471396962",
+     "1471396662",
+     "1471396361",
+     "1471396061",
+     "1471395761",
+     "1471395461",
+     "1471395162",
+     "1471394861"
+    ]
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "WBGT",
+    "throw_channel_name1": "WBGT",
+    "period": "3600",
+    "receive_channel_name": "WBGT",
+    "throw_channel_name2": "/inspect/Heat_Wave/WBGT",
+    "documents": 124848,
+    "update_timing_record": [
+     "1471398496",
+     "1471394896"
+    ]
+   },
+   {
+    "database": "data_2015",
+    "table": "weather",
+    "throw_channel_name1": "weather",
+    "period": "3601",
+    "receive_channel_name": "weather",
+    "throw_channel_name2": "/inspect/data_2015/weather",
+    "documents": 69974,
+    "update_timing_record": [
+     "1471401008",
+     "1471397407"
+    ]
+   },
+   {
+    "database": "hackathon_DB",
+    "table": "Air_Q",
+    "throw_channel_name1": "Air_Q",
+    "period": "3600",
+    "receive_channel_name": "Air_Q",
+    "throw_channel_name2": "/inspect/hackathon_DB/Air_Q",
+    "documents": 314183,
+    "update_timing_record": [
+     "1471401308",
+     "1471397708"
+    ]
+   },
+   {
+    "database": "hackathon_DB",
+    "table": "Parse_Log",
+    "throw_channel_name1": "Parse_Log",
+    "period": "300",
+    "receive_channel_name": "Parse_Log",
+    "throw_channel_name2": "/inspect/hackathon_DB/Parse_Log",
+    "documents": 52821,
+    "update_timing_record": [
+     "1471401908",
+     "1471401608",
+     "1471401308",
+     "1471401011",
+     "1471400708",
+     "1471400410",
+     "1471400108",
+     "1471399808",
+     "1471399509",
+     "1471399208",
+     "1471398908",
+     "1471398609",
+     "1471398308",
+     "1471398009",
+     "1471397708",
+     "1471397408",
+     "1471397108",
+     "1471396808",
+     "1471396509",
+     "1471396208",
+     "1471395909",
+     "1471395608",
+     "1471395308",
+     "1471395008"
+    ]
+   },
+   {
+    "database": "real_time_TP_grid_data",
+    "table": "air_labeld",
+    "throw_channel_name1": "air_labeld",
+    "period": "3602",
+    "receive_channel_name": "air_labeld",
+    "throw_channel_name2": "/inspect/real_time_TP_grid_data/air_labeld",
+    "documents": 15732,
+    "update_timing_record": [
+     "1471398464",
+     "1471394862"
+    ]
+   },
+   {
+    "database": "real_time_TP_grid_data",
+    "table": "labled",
+    "throw_channel_name1": "labled",
+    "period": "601",
+    "receive_channel_name": "labled",
+    "throw_channel_name2": "/inspect/real_time_TP_grid_data/labled",
+    "documents": 93492,
+    "update_timing_record": [
+     "1471401781",
+     "1471401172",
+     "1471400571",
+     "1471399971",
+     "1471399373",
+     "1471398770",
+     "1471398172",
+     "1471397571",
+     "1471396971",
+     "1471396371",
+     "1471395770",
+     "1471395170"
+    ]
+   },
+   {
+    "database": "real_time_TP_grid_data",
+    "table": "unlabled",
+    "throw_channel_name1": "unlabled",
+    "period": "601",
+    "receive_channel_name": "unlabled",
+    "throw_channel_name2": "/inspect/real_time_TP_grid_data/unlabled",
+    "documents": 5824302,
+    "update_timing_record": [
+     "1471401782",
+     "1471401172",
+     "1471400572",
+     "1471399972",
+     "1471399373",
+     "1471398770",
+     "1471398173",
+     "1471397572",
+     "1471396972",
+     "1471396371",
+     "1471395771",
+     "1471395171"
+    ]
+   },
+   {
+    "database": "test",
+    "table": "air",
+    "throw_channel_name1": "air",
+    "period": "3600",
+    "receive_channel_name": "air",
+    "throw_channel_name2": "/inspect/test/air",
+    "documents": 816628,
+    "update_timing_record": [
+     "1471400411",
+     "1471396811"
+    ]
+   },
+   {
+    "database": "test",
+    "table": "tw_weather",
+    "throw_channel_name1": "tw_weather",
+    "period": "600",
+    "receive_channel_name": "tw_weather",
+    "throw_channel_name2": "/inspect/test/tw_weather",
+    "documents": 1295003,
+    "update_timing_record": [
+     "1471401606",
+     "1471401007",
+     "1471400406",
+     "1471399807",
+     "1471399207",
+     "1471398607",
+     "1471398007",
+     "1471397407",
+     "1471396807",
+     "1471396207",
+     "1471395607",
+     "1471395007"
+    ]
+   },
+   {
+    "database": "test",
+    "table": "weather",
+    "throw_channel_name1": "weather",
+    "period": "3601",
+    "receive_channel_name": "weather",
+    "throw_channel_name2": "/inspect/test/weather",
+    "documents": 288673,
+    "update_timing_record": [
+     "1471401008",
+     "1471397407"
+    ]
+   }
+  ],
+  "static table": [
+   {
+    "database": "AQI_inference",
+    "table": "pm25_one_week",
+    "throw_channel_name1": "pm25_one_week",
+    "receive_channel_name": "pm25_one_week",
+    "throw_channel_name2": "/inspect/AQI_inference/pm25_one_week",
+    "documents": 912384
+   },
+   {
+    "database": "Complete_2015_data",
+    "table": "lable_data",
+    "throw_channel_name1": "lable_data",
+    "receive_channel_name": "lable_data",
+    "throw_channel_name2": "/inspect/Complete_2015_data/lable_data",
+    "documents": 157230
+   },
+   {
+    "database": "Complete_2015_data",
+    "table": "unlable_data",
+    "throw_channel_name1": "unlable_data",
+    "receive_channel_name": "unlable_data",
+    "throw_channel_name2": "/inspect/Complete_2015_data/unlable_data",
+    "documents": 0
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "LASS",
+    "throw_channel_name1": "LASS",
+    "receive_channel_name": "LASS",
+    "throw_channel_name2": "/inspect/Heat_Wave/LASS",
+    "documents": 0
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "LASS_API_2016_03_06",
+    "throw_channel_name1": "LASS_API_2016_03_06",
+    "receive_channel_name": "LASS_API_2016_03_06",
+    "throw_channel_name2": "/inspect/Heat_Wave/LASS_API_2016_03_06",
+    "documents": 13613534
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "LASS_rawdata",
+    "throw_channel_name1": "LASS_rawdata",
+    "receive_channel_name": "LASS_rawdata",
+    "throw_channel_name2": "/inspect/Heat_Wave/LASS_rawdata",
+    "documents": 4453494
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "TP_Air_Quality",
+    "throw_channel_name1": "TP_Air_Quality",
+    "receive_channel_name": "TP_Air_Quality",
+    "throw_channel_name2": "/inspect/Heat_Wave/TP_Air_Quality",
+    "documents": 72934
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "TP_Label_Geo_feature",
+    "throw_channel_name1": "TP_Label_Geo_feature",
+    "receive_channel_name": "TP_Label_Geo_feature",
+    "throw_channel_name2": "/inspect/Heat_Wave/TP_Label_Geo_feature",
+    "documents": 17
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "TP_near_3_SN",
+    "throw_channel_name1": "TP_near_3_SN",
+    "receive_channel_name": "TP_near_3_SN",
+    "throw_channel_name2": "/inspect/Heat_Wave/TP_near_3_SN",
+    "documents": 3
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "VD_grid_ind",
+    "throw_channel_name1": "VD_grid_ind",
+    "receive_channel_name": "VD_grid_ind",
+    "throw_channel_name2": "/inspect/Heat_Wave/VD_grid_ind",
+    "documents": 771
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "VD_gridind_week_hour",
+    "throw_channel_name1": "VD_gridind_week_hour",
+    "receive_channel_name": "VD_gridind_week_hour",
+    "throw_channel_name2": "/inspect/Heat_Wave/VD_gridind_week_hour",
+    "documents": 25512
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "grid_polygon_list",
+    "throw_channel_name1": "grid_polygon_list",
+    "receive_channel_name": "grid_polygon_list",
+    "throw_channel_name2": "/inspect/Heat_Wave/grid_polygon_list",
+    "documents": 1140
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "taipei_building_height",
+    "throw_channel_name1": "taipei_building_height",
+    "receive_channel_name": "taipei_building_height",
+    "throw_channel_name2": "/inspect/Heat_Wave/taipei_building_height",
+    "documents": 112160
+   },
+   {
+    "database": "Heat_Wave",
+    "table": "taipei_temple_location",
+    "throw_channel_name1": "taipei_temple_location",
+    "receive_channel_name": "taipei_temple_location",
+    "throw_channel_name2": "/inspect/Heat_Wave/taipei_temple_location",
+    "documents": 265
+   },
+   {
+    "database": "SR_data",
+    "table": "466880",
+    "throw_channel_name1": "466880",
+    "receive_channel_name": "466880",
+    "throw_channel_name2": "/inspect/SR_data/466880",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "466900",
+    "throw_channel_name1": "466900",
+    "receive_channel_name": "466900",
+    "throw_channel_name2": "/inspect/SR_data/466900",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "466910",
+    "throw_channel_name1": "466910",
+    "receive_channel_name": "466910",
+    "throw_channel_name2": "/inspect/SR_data/466910",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "466920",
+    "throw_channel_name1": "466920",
+    "receive_channel_name": "466920",
+    "throw_channel_name2": "/inspect/SR_data/466920",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "466930",
+    "throw_channel_name1": "466930",
+    "receive_channel_name": "466930",
+    "throw_channel_name2": "/inspect/SR_data/466930",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "466940",
+    "throw_channel_name1": "466940",
+    "receive_channel_name": "466940",
+    "throw_channel_name2": "/inspect/SR_data/466940",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "466950",
+    "throw_channel_name1": "466950",
+    "receive_channel_name": "466950",
+    "throw_channel_name2": "/inspect/SR_data/466950",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "466990",
+    "throw_channel_name1": "466990",
+    "receive_channel_name": "466990",
+    "throw_channel_name2": "/inspect/SR_data/466990",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467060",
+    "throw_channel_name1": "467060",
+    "receive_channel_name": "467060",
+    "throw_channel_name2": "/inspect/SR_data/467060",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467080",
+    "throw_channel_name1": "467080",
+    "receive_channel_name": "467080",
+    "throw_channel_name2": "/inspect/SR_data/467080",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467110",
+    "throw_channel_name1": "467110",
+    "receive_channel_name": "467110",
+    "throw_channel_name2": "/inspect/SR_data/467110",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467300",
+    "throw_channel_name1": "467300",
+    "receive_channel_name": "467300",
+    "throw_channel_name2": "/inspect/SR_data/467300",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467350",
+    "throw_channel_name1": "467350",
+    "receive_channel_name": "467350",
+    "throw_channel_name2": "/inspect/SR_data/467350",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467410",
+    "throw_channel_name1": "467410",
+    "receive_channel_name": "467410",
+    "throw_channel_name2": "/inspect/SR_data/467410",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467420",
+    "throw_channel_name1": "467420",
+    "receive_channel_name": "467420",
+    "throw_channel_name2": "/inspect/SR_data/467420",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467440",
+    "throw_channel_name1": "467440",
+    "receive_channel_name": "467440",
+    "throw_channel_name2": "/inspect/SR_data/467440",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467480",
+    "throw_channel_name1": "467480",
+    "receive_channel_name": "467480",
+    "throw_channel_name2": "/inspect/SR_data/467480",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467490",
+    "throw_channel_name1": "467490",
+    "receive_channel_name": "467490",
+    "throw_channel_name2": "/inspect/SR_data/467490",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467530",
+    "throw_channel_name1": "467530",
+    "receive_channel_name": "467530",
+    "throw_channel_name2": "/inspect/SR_data/467530",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467540",
+    "throw_channel_name1": "467540",
+    "receive_channel_name": "467540",
+    "throw_channel_name2": "/inspect/SR_data/467540",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467550",
+    "throw_channel_name1": "467550",
+    "receive_channel_name": "467550",
+    "throw_channel_name2": "/inspect/SR_data/467550",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467571",
+    "throw_channel_name1": "467571",
+    "receive_channel_name": "467571",
+    "throw_channel_name2": "/inspect/SR_data/467571",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467590",
+    "throw_channel_name1": "467590",
+    "receive_channel_name": "467590",
+    "throw_channel_name2": "/inspect/SR_data/467590",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467610",
+    "throw_channel_name1": "467610",
+    "receive_channel_name": "467610",
+    "throw_channel_name2": "/inspect/SR_data/467610",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467620",
+    "throw_channel_name1": "467620",
+    "receive_channel_name": "467620",
+    "throw_channel_name2": "/inspect/SR_data/467620",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467650",
+    "throw_channel_name1": "467650",
+    "receive_channel_name": "467650",
+    "throw_channel_name2": "/inspect/SR_data/467650",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467660",
+    "throw_channel_name1": "467660",
+    "receive_channel_name": "467660",
+    "throw_channel_name2": "/inspect/SR_data/467660",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467770",
+    "throw_channel_name1": "467770",
+    "receive_channel_name": "467770",
+    "throw_channel_name2": "/inspect/SR_data/467770",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467780",
+    "throw_channel_name1": "467780",
+    "receive_channel_name": "467780",
+    "throw_channel_name2": "/inspect/SR_data/467780",
+    "documents": 8760
+   },
+   {
+    "database": "SR_data",
+    "table": "467990",
+    "throw_channel_name1": "467990",
+    "receive_channel_name": "467990",
+    "throw_channel_name2": "/inspect/SR_data/467990",
+    "documents": 8760
+   },
+   {
+    "database": "data_2015",
+    "table": "air_q",
+    "throw_channel_name1": "air_q",
+    "receive_channel_name": "air_q",
+    "throw_channel_name2": "/inspect/data_2015/air_q",
+    "documents": 291979
+   },
+   {
+    "database": "data_2015",
+    "table": "geo",
+    "throw_channel_name1": "geo",
+    "receive_channel_name": "geo",
+    "throw_channel_name2": "/inspect/data_2015/geo",
+    "documents": 1140
+   },
+   {
+    "database": "data_2015",
+    "table": "mcctb_Guting",
+    "throw_channel_name1": "mcctb_Guting",
+    "receive_channel_name": "mcctb_Guting",
+    "throw_channel_name2": "/inspect/data_2015/mcctb_Guting",
+    "documents": 8773
+   },
+   {
+    "database": "data_2015",
+    "table": "vd",
+    "throw_channel_name1": "vd",
+    "receive_channel_name": "vd",
+    "throw_channel_name2": "/inspect/data_2015/vd",
+    "documents": 24768
+   },
+   {
+    "database": "hackathon_DB",
+    "table": "VD",
+    "throw_channel_name1": "VD",
+    "receive_channel_name": "VD",
+    "throw_channel_name2": "/inspect/hackathon_DB/VD",
+    "documents": 32267896
+   },
+   {
+    "database": "merivan_database",
+    "table": "prediction",
+    "throw_channel_name1": "prediction",
+    "receive_channel_name": "prediction",
+    "throw_channel_name2": "/inspect/merivan_database/prediction",
+    "documents": 17771
+   },
+   {
+    "database": "test",
+    "table": "ExpLaborData",
+    "throw_channel_name1": "ExpLaborData",
+    "receive_channel_name": "ExpLaborData",
+    "throw_channel_name2": "/inspect/test/ExpLaborData",
+    "documents": 10
+   },
+   {
+    "database": "test",
+    "table": "GeoLocation",
+    "throw_channel_name1": "GeoLocation",
+    "receive_channel_name": "GeoLocation",
+    "throw_channel_name2": "/inspect/test/GeoLocation",
+    "documents": 76
+   },
+   {
+    "database": "test",
+    "table": "Geo_Features",
+    "throw_channel_name1": "Geo_Features",
+    "receive_channel_name": "Geo_Features",
+    "throw_channel_name2": "/inspect/test/Geo_Features",
+    "documents": 1140
+   },
+   {
+    "database": "test",
+    "table": "Location",
+    "throw_channel_name1": "Location",
+    "receive_channel_name": "Location",
+    "throw_channel_name2": "/inspect/test/Location",
+    "documents": 76
+   },
+   {
+    "database": "test",
+    "table": "Plash_intern_diary",
+    "throw_channel_name1": "Plash_intern_diary",
+    "receive_channel_name": "Plash_intern_diary",
+    "throw_channel_name2": "/inspect/test/Plash_intern_diary",
+    "documents": 124713
+   },
+   {
+    "database": "test",
+    "table": "TP_VD_traffic",
+    "throw_channel_name1": "TP_VD_traffic",
+    "receive_channel_name": "TP_VD_traffic",
+    "throw_channel_name2": "/inspect/test/TP_VD_traffic",
+    "documents": 46698288
+   },
+   {
+    "database": "test",
+    "table": "Total_Loc_A_S_W",
+    "throw_channel_name1": "Total_Loc_A_S_W",
+    "receive_channel_name": "Total_Loc_A_S_W",
+    "throw_channel_name2": "/inspect/test/Total_Loc_A_S_W",
+    "documents": 76
+   },
+   {
+    "database": "test",
+    "table": "grid_lon_lat",
+    "throw_channel_name1": "grid_lon_lat",
+    "receive_channel_name": "grid_lon_lat",
+    "throw_channel_name2": "/inspect/test/grid_lon_lat",
+    "documents": 5700
+   },
+   {
+    "database": "test",
+    "table": "laborSensorData",
+    "throw_channel_name1": "laborSensorData",
+    "receive_channel_name": "laborSensorData",
+    "throw_channel_name2": "/inspect/test/laborSensorData",
+    "documents": 89185
+   },
+   {
+    "database": "test",
+    "table": "quakes",
+    "throw_channel_name1": "quakes",
+    "receive_channel_name": "quakes",
+    "throw_channel_name2": "/inspect/test/quakes",
+    "documents": 1425
+   },
+   {
+    "database": "test",
+    "table": "real_time_test",
+    "throw_channel_name1": "real_time_test",
+    "receive_channel_name": "real_time_test",
+    "throw_channel_name2": "/inspect/test/real_time_test",
+    "documents": 508
+   },
+   {
+    "database": "test",
+    "table": "solar_stations",
+    "throw_channel_name1": "solar_stations",
+    "receive_channel_name": "solar_stations",
+    "throw_channel_name2": "/inspect/test/solar_stations",
+    "documents": 30
+   },
+   {
+    "database": "test",
+    "table": "taiwan_hot_test",
+    "throw_channel_name1": "taiwan_hot_test",
+    "receive_channel_name": "taiwan_hot_test",
+    "throw_channel_name2": "/inspect/test/taiwan_hot_test",
+    "documents": 1824
+   },
+   {
+    "database": "test",
+    "table": "test_insert_now",
+    "throw_channel_name1": "test_insert_now",
+    "receive_channel_name": "test_insert_now",
+    "throw_channel_name2": "/inspect/test/test_insert_now",
+    "documents": 2
+   },
+   {
+    "database": "test",
+    "table": "tutorial_tb",
+    "throw_channel_name1": "tutorial_tb",
+    "receive_channel_name": "tutorial_tb",
+    "throw_channel_name2": "/inspect/test/tutorial_tb",
+    "documents": 600
+   }
+  ]
+ }
+}

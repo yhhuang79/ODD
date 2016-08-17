@@ -9,11 +9,13 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var ODD_test = require('./routes/ODD_test');
 var test_template = require('./routes/test_template');
-var tree_page = require('./routes/tree_page');
+
 var tree_page2 = require('./routes/tree_page2');
 var tree_configuration = require('./routes/tree_configuration');
 
 var one_for_all_test = require('./routes/one_for_all_test');
+
+var dashboard_updating = require('./routes/dashboard_updating');
 
 var io = require('socket.io')();
 var app = express();
@@ -49,10 +51,11 @@ app.use('/inspect',one_for_all_test);
 app.use('/users', users);
 app.use('/ODD_test',ODD_test);
 app.use('/test_template',test_template);
-app.use('/tree_page',tree_page);
+
 app.use('/tree_page2',tree_page2);
 app.use('/tree_configuration',tree_configuration);
 
+app.use('/dashboard_updating',dashboard_updating);
 
 
 

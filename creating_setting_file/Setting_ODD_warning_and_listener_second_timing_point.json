@@ -6,7 +6,8 @@
    "throw_channel_name1": "pm25_one_week",
    "period": null,
    "receive_channel_name": "pm25_one_week",
-   "throw_channel_name2": "/inspect/AQI_inference/pm25_one_week"
+   "throw_channel_name2": "/inspect/AQI_inference/pm25_one_week",
+   "documents": 912384
   },
   {
    "database": "Complete_2015_data",
@@ -14,7 +15,8 @@
    "throw_channel_name1": "lable_data",
    "period": null,
    "receive_channel_name": "lable_data",
-   "throw_channel_name2": "/inspect/Complete_2015_data/lable_data"
+   "throw_channel_name2": "/inspect/Complete_2015_data/lable_data",
+   "documents": 157230
   },
   {
    "database": "Complete_2015_data",
@@ -22,7 +24,8 @@
    "throw_channel_name1": "unlable_data",
    "period": null,
    "receive_channel_name": "unlable_data",
-   "throw_channel_name2": "/inspect/Complete_2015_data/unlable_data"
+   "throw_channel_name2": "/inspect/Complete_2015_data/unlable_data",
+   "documents": 0
   },
   {
    "database": "Heat_Wave",
@@ -30,7 +33,8 @@
    "throw_channel_name1": "LASS",
    "period": null,
    "receive_channel_name": "LASS",
-   "throw_channel_name2": "/inspect/Heat_Wave/LASS"
+   "throw_channel_name2": "/inspect/Heat_Wave/LASS",
+   "documents": 0
   },
   {
    "database": "Heat_Wave",
@@ -38,7 +42,8 @@
    "throw_channel_name1": "LASS_API",
    "period": null,
    "receive_channel_name": "LASS_API",
-   "throw_channel_name2": "/inspect/Heat_Wave/LASS_API"
+   "throw_channel_name2": "/inspect/Heat_Wave/LASS_API",
+   "documents": 979448
   },
   {
    "database": "Heat_Wave",
@@ -46,7 +51,8 @@
    "throw_channel_name1": "LASS_API_2016_03_06",
    "period": null,
    "receive_channel_name": "LASS_API_2016_03_06",
-   "throw_channel_name2": "/inspect/Heat_Wave/LASS_API_2016_03_06"
+   "throw_channel_name2": "/inspect/Heat_Wave/LASS_API_2016_03_06",
+   "documents": 13613534
   },
   {
    "database": "Heat_Wave",
@@ -54,7 +60,8 @@
    "throw_channel_name1": "LASS_rawdata",
    "period": null,
    "receive_channel_name": "LASS_rawdata",
-   "throw_channel_name2": "/inspect/Heat_Wave/LASS_rawdata"
+   "throw_channel_name2": "/inspect/Heat_Wave/LASS_rawdata",
+   "documents": 4453494
   },
   {
    "database": "Heat_Wave",
@@ -62,7 +69,8 @@
    "throw_channel_name1": "TP_Air_Quality",
    "period": null,
    "receive_channel_name": "TP_Air_Quality",
-   "throw_channel_name2": "/inspect/Heat_Wave/TP_Air_Quality"
+   "throw_channel_name2": "/inspect/Heat_Wave/TP_Air_Quality",
+   "documents": 72934
   },
   {
    "database": "Heat_Wave",
@@ -70,7 +78,8 @@
    "throw_channel_name1": "TP_Label_Geo_feature",
    "period": null,
    "receive_channel_name": "TP_Label_Geo_feature",
-   "throw_channel_name2": "/inspect/Heat_Wave/TP_Label_Geo_feature"
+   "throw_channel_name2": "/inspect/Heat_Wave/TP_Label_Geo_feature",
+   "documents": 17
   },
   {
    "database": "Heat_Wave",
@@ -78,7 +87,8 @@
    "throw_channel_name1": "TP_near_3_SN",
    "period": null,
    "receive_channel_name": "TP_near_3_SN",
-   "throw_channel_name2": "/inspect/Heat_Wave/TP_near_3_SN"
+   "throw_channel_name2": "/inspect/Heat_Wave/TP_near_3_SN",
+   "documents": 3
   },
   {
    "database": "Heat_Wave",
@@ -86,7 +96,8 @@
    "throw_channel_name1": "VD_grid_ind",
    "period": null,
    "receive_channel_name": "VD_grid_ind",
-   "throw_channel_name2": "/inspect/Heat_Wave/VD_grid_ind"
+   "throw_channel_name2": "/inspect/Heat_Wave/VD_grid_ind",
+   "documents": 771
   },
   {
    "database": "Heat_Wave",
@@ -94,7 +105,8 @@
    "throw_channel_name1": "VD_gridind_week_hour",
    "period": null,
    "receive_channel_name": "VD_gridind_week_hour",
-   "throw_channel_name2": "/inspect/Heat_Wave/VD_gridind_week_hour"
+   "throw_channel_name2": "/inspect/Heat_Wave/VD_gridind_week_hour",
+   "documents": 25512
   },
   {
    "database": "Heat_Wave",
@@ -102,7 +114,8 @@
    "throw_channel_name1": "WBGT",
    "period": null,
    "receive_channel_name": "WBGT",
-   "throw_channel_name2": "/inspect/Heat_Wave/WBGT"
+   "throw_channel_name2": "/inspect/Heat_Wave/WBGT",
+   "documents": 125304
   },
   {
    "database": "Heat_Wave",
@@ -110,7 +123,8 @@
    "throw_channel_name1": "grid_polygon_list",
    "period": null,
    "receive_channel_name": "grid_polygon_list",
-   "throw_channel_name2": "/inspect/Heat_Wave/grid_polygon_list"
+   "throw_channel_name2": "/inspect/Heat_Wave/grid_polygon_list",
+   "documents": 1140
   },
   {
    "database": "Heat_Wave",
@@ -118,7 +132,8 @@
    "throw_channel_name1": "taipei_building_height",
    "period": null,
    "receive_channel_name": "taipei_building_height",
-   "throw_channel_name2": "/inspect/Heat_Wave/taipei_building_height"
+   "throw_channel_name2": "/inspect/Heat_Wave/taipei_building_height",
+   "documents": 112160
   },
   {
    "database": "Heat_Wave",
@@ -126,7 +141,8 @@
    "throw_channel_name1": "taipei_temple_location",
    "period": null,
    "receive_channel_name": "taipei_temple_location",
-   "throw_channel_name2": "/inspect/Heat_Wave/taipei_temple_location"
+   "throw_channel_name2": "/inspect/Heat_Wave/taipei_temple_location",
+   "documents": 265
   },
   {
    "database": "SR_data",
@@ -134,7 +150,8 @@
    "throw_channel_name1": "466880",
    "period": null,
    "receive_channel_name": "466880",
-   "throw_channel_name2": "/inspect/SR_data/466880"
+   "throw_channel_name2": "/inspect/SR_data/466880",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -142,7 +159,8 @@
    "throw_channel_name1": "466900",
    "period": null,
    "receive_channel_name": "466900",
-   "throw_channel_name2": "/inspect/SR_data/466900"
+   "throw_channel_name2": "/inspect/SR_data/466900",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -150,7 +168,8 @@
    "throw_channel_name1": "466910",
    "period": null,
    "receive_channel_name": "466910",
-   "throw_channel_name2": "/inspect/SR_data/466910"
+   "throw_channel_name2": "/inspect/SR_data/466910",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -158,7 +177,8 @@
    "throw_channel_name1": "466920",
    "period": null,
    "receive_channel_name": "466920",
-   "throw_channel_name2": "/inspect/SR_data/466920"
+   "throw_channel_name2": "/inspect/SR_data/466920",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -166,7 +186,8 @@
    "throw_channel_name1": "466930",
    "period": null,
    "receive_channel_name": "466930",
-   "throw_channel_name2": "/inspect/SR_data/466930"
+   "throw_channel_name2": "/inspect/SR_data/466930",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -174,7 +195,8 @@
    "throw_channel_name1": "466940",
    "period": null,
    "receive_channel_name": "466940",
-   "throw_channel_name2": "/inspect/SR_data/466940"
+   "throw_channel_name2": "/inspect/SR_data/466940",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -182,7 +204,8 @@
    "throw_channel_name1": "466950",
    "period": null,
    "receive_channel_name": "466950",
-   "throw_channel_name2": "/inspect/SR_data/466950"
+   "throw_channel_name2": "/inspect/SR_data/466950",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -190,7 +213,8 @@
    "throw_channel_name1": "466990",
    "period": null,
    "receive_channel_name": "466990",
-   "throw_channel_name2": "/inspect/SR_data/466990"
+   "throw_channel_name2": "/inspect/SR_data/466990",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -198,7 +222,8 @@
    "throw_channel_name1": "467060",
    "period": null,
    "receive_channel_name": "467060",
-   "throw_channel_name2": "/inspect/SR_data/467060"
+   "throw_channel_name2": "/inspect/SR_data/467060",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -206,7 +231,8 @@
    "throw_channel_name1": "467080",
    "period": null,
    "receive_channel_name": "467080",
-   "throw_channel_name2": "/inspect/SR_data/467080"
+   "throw_channel_name2": "/inspect/SR_data/467080",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -214,7 +240,8 @@
    "throw_channel_name1": "467110",
    "period": null,
    "receive_channel_name": "467110",
-   "throw_channel_name2": "/inspect/SR_data/467110"
+   "throw_channel_name2": "/inspect/SR_data/467110",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -222,7 +249,8 @@
    "throw_channel_name1": "467300",
    "period": null,
    "receive_channel_name": "467300",
-   "throw_channel_name2": "/inspect/SR_data/467300"
+   "throw_channel_name2": "/inspect/SR_data/467300",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -230,7 +258,8 @@
    "throw_channel_name1": "467350",
    "period": null,
    "receive_channel_name": "467350",
-   "throw_channel_name2": "/inspect/SR_data/467350"
+   "throw_channel_name2": "/inspect/SR_data/467350",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -238,7 +267,8 @@
    "throw_channel_name1": "467410",
    "period": null,
    "receive_channel_name": "467410",
-   "throw_channel_name2": "/inspect/SR_data/467410"
+   "throw_channel_name2": "/inspect/SR_data/467410",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -246,7 +276,8 @@
    "throw_channel_name1": "467420",
    "period": null,
    "receive_channel_name": "467420",
-   "throw_channel_name2": "/inspect/SR_data/467420"
+   "throw_channel_name2": "/inspect/SR_data/467420",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -254,7 +285,8 @@
    "throw_channel_name1": "467440",
    "period": null,
    "receive_channel_name": "467440",
-   "throw_channel_name2": "/inspect/SR_data/467440"
+   "throw_channel_name2": "/inspect/SR_data/467440",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -262,7 +294,8 @@
    "throw_channel_name1": "467480",
    "period": null,
    "receive_channel_name": "467480",
-   "throw_channel_name2": "/inspect/SR_data/467480"
+   "throw_channel_name2": "/inspect/SR_data/467480",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -270,7 +303,8 @@
    "throw_channel_name1": "467490",
    "period": null,
    "receive_channel_name": "467490",
-   "throw_channel_name2": "/inspect/SR_data/467490"
+   "throw_channel_name2": "/inspect/SR_data/467490",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -278,7 +312,8 @@
    "throw_channel_name1": "467530",
    "period": null,
    "receive_channel_name": "467530",
-   "throw_channel_name2": "/inspect/SR_data/467530"
+   "throw_channel_name2": "/inspect/SR_data/467530",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -286,7 +321,8 @@
    "throw_channel_name1": "467540",
    "period": null,
    "receive_channel_name": "467540",
-   "throw_channel_name2": "/inspect/SR_data/467540"
+   "throw_channel_name2": "/inspect/SR_data/467540",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -294,7 +330,8 @@
    "throw_channel_name1": "467550",
    "period": null,
    "receive_channel_name": "467550",
-   "throw_channel_name2": "/inspect/SR_data/467550"
+   "throw_channel_name2": "/inspect/SR_data/467550",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -302,7 +339,8 @@
    "throw_channel_name1": "467571",
    "period": null,
    "receive_channel_name": "467571",
-   "throw_channel_name2": "/inspect/SR_data/467571"
+   "throw_channel_name2": "/inspect/SR_data/467571",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -310,7 +348,8 @@
    "throw_channel_name1": "467590",
    "period": null,
    "receive_channel_name": "467590",
-   "throw_channel_name2": "/inspect/SR_data/467590"
+   "throw_channel_name2": "/inspect/SR_data/467590",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -318,7 +357,8 @@
    "throw_channel_name1": "467610",
    "period": null,
    "receive_channel_name": "467610",
-   "throw_channel_name2": "/inspect/SR_data/467610"
+   "throw_channel_name2": "/inspect/SR_data/467610",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -326,7 +366,8 @@
    "throw_channel_name1": "467620",
    "period": null,
    "receive_channel_name": "467620",
-   "throw_channel_name2": "/inspect/SR_data/467620"
+   "throw_channel_name2": "/inspect/SR_data/467620",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -334,7 +375,8 @@
    "throw_channel_name1": "467650",
    "period": null,
    "receive_channel_name": "467650",
-   "throw_channel_name2": "/inspect/SR_data/467650"
+   "throw_channel_name2": "/inspect/SR_data/467650",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -342,7 +384,8 @@
    "throw_channel_name1": "467660",
    "period": null,
    "receive_channel_name": "467660",
-   "throw_channel_name2": "/inspect/SR_data/467660"
+   "throw_channel_name2": "/inspect/SR_data/467660",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -350,7 +393,8 @@
    "throw_channel_name1": "467770",
    "period": null,
    "receive_channel_name": "467770",
-   "throw_channel_name2": "/inspect/SR_data/467770"
+   "throw_channel_name2": "/inspect/SR_data/467770",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -358,7 +402,8 @@
    "throw_channel_name1": "467780",
    "period": null,
    "receive_channel_name": "467780",
-   "throw_channel_name2": "/inspect/SR_data/467780"
+   "throw_channel_name2": "/inspect/SR_data/467780",
+   "documents": 8760
   },
   {
    "database": "SR_data",
@@ -366,7 +411,8 @@
    "throw_channel_name1": "467990",
    "period": null,
    "receive_channel_name": "467990",
-   "throw_channel_name2": "/inspect/SR_data/467990"
+   "throw_channel_name2": "/inspect/SR_data/467990",
+   "documents": 8760
   },
   {
    "database": "data_2015",
@@ -374,7 +420,8 @@
    "throw_channel_name1": "air_q",
    "period": null,
    "receive_channel_name": "air_q",
-   "throw_channel_name2": "/inspect/data_2015/air_q"
+   "throw_channel_name2": "/inspect/data_2015/air_q",
+   "documents": 291979
   },
   {
    "database": "data_2015",
@@ -382,7 +429,8 @@
    "throw_channel_name1": "geo",
    "period": null,
    "receive_channel_name": "geo",
-   "throw_channel_name2": "/inspect/data_2015/geo"
+   "throw_channel_name2": "/inspect/data_2015/geo",
+   "documents": 1140
   },
   {
    "database": "data_2015",
@@ -390,7 +438,8 @@
    "throw_channel_name1": "mcctb_Guting",
    "period": null,
    "receive_channel_name": "mcctb_Guting",
-   "throw_channel_name2": "/inspect/data_2015/mcctb_Guting"
+   "throw_channel_name2": "/inspect/data_2015/mcctb_Guting",
+   "documents": 8773
   },
   {
    "database": "data_2015",
@@ -398,7 +447,8 @@
    "throw_channel_name1": "vd",
    "period": null,
    "receive_channel_name": "vd",
-   "throw_channel_name2": "/inspect/data_2015/vd"
+   "throw_channel_name2": "/inspect/data_2015/vd",
+   "documents": 24768
   },
   {
    "database": "data_2015",
@@ -406,7 +456,8 @@
    "throw_channel_name1": "weather",
    "period": null,
    "receive_channel_name": "weather",
-   "throw_channel_name2": "/inspect/data_2015/weather"
+   "throw_channel_name2": "/inspect/data_2015/weather",
+   "documents": 69974
   },
   {
    "database": "hackathon_DB",
@@ -414,7 +465,8 @@
    "throw_channel_name1": "Air_Q",
    "period": null,
    "receive_channel_name": "Air_Q",
-   "throw_channel_name2": "/inspect/hackathon_DB/Air_Q"
+   "throw_channel_name2": "/inspect/hackathon_DB/Air_Q",
+   "documents": 314411
   },
   {
    "database": "hackathon_DB",
@@ -422,7 +474,8 @@
    "throw_channel_name1": "Parse_Log",
    "period": null,
    "receive_channel_name": "Parse_Log",
-   "throw_channel_name2": "/inspect/hackathon_DB/Parse_Log"
+   "throw_channel_name2": "/inspect/hackathon_DB/Parse_Log",
+   "documents": 52885
   },
   {
    "database": "hackathon_DB",
@@ -430,7 +483,8 @@
    "throw_channel_name1": "VD",
    "period": null,
    "receive_channel_name": "VD",
-   "throw_channel_name2": "/inspect/hackathon_DB/VD"
+   "throw_channel_name2": "/inspect/hackathon_DB/VD",
+   "documents": 32267896
   },
   {
    "database": "merivan_database",
@@ -438,7 +492,8 @@
    "throw_channel_name1": "prediction",
    "period": null,
    "receive_channel_name": "prediction",
-   "throw_channel_name2": "/inspect/merivan_database/prediction"
+   "throw_channel_name2": "/inspect/merivan_database/prediction",
+   "documents": 17771
   },
   {
    "database": "real_time_TP_grid_data",
@@ -446,7 +501,8 @@
    "throw_channel_name1": "air_labeld",
    "period": null,
    "receive_channel_name": "air_labeld",
-   "throw_channel_name2": "/inspect/real_time_TP_grid_data/air_labeld"
+   "throw_channel_name2": "/inspect/real_time_TP_grid_data/air_labeld",
+   "documents": 15786
   },
   {
    "database": "real_time_TP_grid_data",
@@ -454,7 +510,8 @@
    "throw_channel_name1": "labled",
    "period": null,
    "receive_channel_name": "labled",
-   "throw_channel_name2": "/inspect/real_time_TP_grid_data/labled"
+   "throw_channel_name2": "/inspect/real_time_TP_grid_data/labled",
+   "documents": 93888
   },
   {
    "database": "real_time_TP_grid_data",
@@ -462,7 +519,8 @@
    "throw_channel_name1": "unlabled",
    "period": null,
    "receive_channel_name": "unlabled",
-   "throw_channel_name2": "/inspect/real_time_TP_grid_data/unlabled"
+   "throw_channel_name2": "/inspect/real_time_TP_grid_data/unlabled",
+   "documents": 5848986
   },
   {
    "database": "test",
@@ -470,7 +528,8 @@
    "throw_channel_name1": "ExpLaborData",
    "period": null,
    "receive_channel_name": "ExpLaborData",
-   "throw_channel_name2": "/inspect/test/ExpLaborData"
+   "throw_channel_name2": "/inspect/test/ExpLaborData",
+   "documents": 10
   },
   {
    "database": "test",
@@ -478,7 +537,8 @@
    "throw_channel_name1": "GeoLocation",
    "period": null,
    "receive_channel_name": "GeoLocation",
-   "throw_channel_name2": "/inspect/test/GeoLocation"
+   "throw_channel_name2": "/inspect/test/GeoLocation",
+   "documents": 76
   },
   {
    "database": "test",
@@ -486,7 +546,8 @@
    "throw_channel_name1": "Geo_Features",
    "period": null,
    "receive_channel_name": "Geo_Features",
-   "throw_channel_name2": "/inspect/test/Geo_Features"
+   "throw_channel_name2": "/inspect/test/Geo_Features",
+   "documents": 1140
   },
   {
    "database": "test",
@@ -494,7 +555,8 @@
    "throw_channel_name1": "Location",
    "period": null,
    "receive_channel_name": "Location",
-   "throw_channel_name2": "/inspect/test/Location"
+   "throw_channel_name2": "/inspect/test/Location",
+   "documents": 76
   },
   {
    "database": "test",
@@ -502,7 +564,8 @@
    "throw_channel_name1": "Plash_intern_diary",
    "period": null,
    "receive_channel_name": "Plash_intern_diary",
-   "throw_channel_name2": "/inspect/test/Plash_intern_diary"
+   "throw_channel_name2": "/inspect/test/Plash_intern_diary",
+   "documents": 124713
   },
   {
    "database": "test",
@@ -510,7 +573,8 @@
    "throw_channel_name1": "TP_VD_traffic",
    "period": null,
    "receive_channel_name": "TP_VD_traffic",
-   "throw_channel_name2": "/inspect/test/TP_VD_traffic"
+   "throw_channel_name2": "/inspect/test/TP_VD_traffic",
+   "documents": 46698288
   },
   {
    "database": "test",
@@ -518,7 +582,8 @@
    "throw_channel_name1": "Total_Loc_A_S_W",
    "period": null,
    "receive_channel_name": "Total_Loc_A_S_W",
-   "throw_channel_name2": "/inspect/test/Total_Loc_A_S_W"
+   "throw_channel_name2": "/inspect/test/Total_Loc_A_S_W",
+   "documents": 76
   },
   {
    "database": "test",
@@ -526,7 +591,8 @@
    "throw_channel_name1": "air",
    "period": null,
    "receive_channel_name": "air",
-   "throw_channel_name2": "/inspect/test/air"
+   "throw_channel_name2": "/inspect/test/air",
+   "documents": 816932
   },
   {
    "database": "test",
@@ -534,7 +600,8 @@
    "throw_channel_name1": "grid_lon_lat",
    "period": null,
    "receive_channel_name": "grid_lon_lat",
-   "throw_channel_name2": "/inspect/test/grid_lon_lat"
+   "throw_channel_name2": "/inspect/test/grid_lon_lat",
+   "documents": 5700
   },
   {
    "database": "test",
@@ -542,7 +609,8 @@
    "throw_channel_name1": "laborSensorData",
    "period": null,
    "receive_channel_name": "laborSensorData",
-   "throw_channel_name2": "/inspect/test/laborSensorData"
+   "throw_channel_name2": "/inspect/test/laborSensorData",
+   "documents": 89185
   },
   {
    "database": "test",
@@ -550,7 +618,8 @@
    "throw_channel_name1": "quakes",
    "period": null,
    "receive_channel_name": "quakes",
-   "throw_channel_name2": "/inspect/test/quakes"
+   "throw_channel_name2": "/inspect/test/quakes",
+   "documents": 1425
   },
   {
    "database": "test",
@@ -558,7 +627,8 @@
    "throw_channel_name1": "real_time_test",
    "period": null,
    "receive_channel_name": "real_time_test",
-   "throw_channel_name2": "/inspect/test/real_time_test"
+   "throw_channel_name2": "/inspect/test/real_time_test",
+   "documents": 524
   },
   {
    "database": "test",
@@ -566,7 +636,8 @@
    "throw_channel_name1": "solar_stations",
    "period": null,
    "receive_channel_name": "solar_stations",
-   "throw_channel_name2": "/inspect/test/solar_stations"
+   "throw_channel_name2": "/inspect/test/solar_stations",
+   "documents": 30
   },
   {
    "database": "test",
@@ -574,7 +645,8 @@
    "throw_channel_name1": "taiwan_hot_test",
    "period": null,
    "receive_channel_name": "taiwan_hot_test",
-   "throw_channel_name2": "/inspect/test/taiwan_hot_test"
+   "throw_channel_name2": "/inspect/test/taiwan_hot_test",
+   "documents": 1824
   },
   {
    "database": "test",
@@ -582,7 +654,8 @@
    "throw_channel_name1": "test_insert_now",
    "period": null,
    "receive_channel_name": "test_insert_now",
-   "throw_channel_name2": "/inspect/test/test_insert_now"
+   "throw_channel_name2": "/inspect/test/test_insert_now",
+   "documents": 2
   },
   {
    "database": "test",
@@ -590,7 +663,8 @@
    "throw_channel_name1": "tutorial_tb",
    "period": null,
    "receive_channel_name": "tutorial_tb",
-   "throw_channel_name2": "/inspect/test/tutorial_tb"
+   "throw_channel_name2": "/inspect/test/tutorial_tb",
+   "documents": 600
   },
   {
    "database": "test",
@@ -598,7 +672,8 @@
    "throw_channel_name1": "tw_weather",
    "period": null,
    "receive_channel_name": "tw_weather",
-   "throw_channel_name2": "/inspect/test/tw_weather"
+   "throw_channel_name2": "/inspect/test/tw_weather",
+   "documents": 1295654
   },
   {
    "database": "test",
@@ -606,7 +681,9 @@
    "throw_channel_name1": "weather",
    "period": null,
    "receive_channel_name": "weather",
-   "throw_channel_name2": "/inspect/test/weather"
+   "throw_channel_name2": "/inspect/test/weather",
+   "documents": 288745
   }
- ]
+ ],
+ "Record_Time": 1471242530997
 }

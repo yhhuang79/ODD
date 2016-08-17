@@ -2,6 +2,7 @@
 var r = require('rethinkdb');
 var rethinkdbHost = "140.109.18.136";
 var warning_machine=null;
+var email_system_module = require("./email_system_module");
 
 module.exports =
 {
@@ -26,6 +27,7 @@ module.exports =
                     function()
                     {
                         console.log("no data input test for "+ (w++*(period/1000)) +" sec from database: "+database_name,"table: "+table_name);
+                        //email_system_module.Email_sender(database_name, table_name, (w++*(period/1000)) );
                     }
                     ,period);
             }

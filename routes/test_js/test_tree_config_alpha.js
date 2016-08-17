@@ -10,7 +10,7 @@ var r = require('rethinkdb');
 var rethinkdbHost = "140.109.18.136";
 var connection1=null;
 
-var table_attr_list_module= require("../module_js/table_attr_list_module");
+var table_attr_list_module= require("../../module_js/table_attr_list_module");
 
 table_attr_list_module.table_attr_list('AQI_inference','pm25_one_week',
     function(result)

@@ -1,5 +1,3 @@
-
-
 var async = require('async');
 var r = require('rethinkdb');
 var jsonfile = require('jsonfile');
@@ -7,8 +5,10 @@ var jsonfile = require('jsonfile');
 var rethinkdbHost = "140.109.18.136";
 var connection1=null;
 
+var clock = new Date();
+var DB_structure={"RethinkDB": [],"Record_Time":clock.getTime()};
+var filename = "./Setting_ODD_warning_and_listener_second_timing_point.json";
 
-var DB_structure={"RethinkDB": []};
 
 async.waterfall
 (
@@ -61,18 +61,23 @@ async.waterfall
                                     async.forEachOfLimit(tableList,1,
                                         function(single_table_name,key2,callback_forEach_in)
                                         {
-                                            //console.log(single_db_name,single_table_name
-                                            DB_structure["RethinkDB"].push(
-                                                {
-                                                    "database":single_db_name,
-                                                    "table":single_table_name,
-                                                    "throw_channel_name1":single_table_name,
-                                                    "period":null,
-                                                    "receive_channel_name":single_table_name,
-                                                    "throw_channel_name2":"/inspect/"+single_db_name+"/"+single_table_name
-                                                }
-                                            );
-                                            callback_forEach_in(null);
+                                            r.db(single_db_name).table(single_table_name).count().run(connection1, function(err, number)
+                                            {
+                                                if (err) throw err;
+                                                //console.log(single_db_name,single_table_name
+                                                DB_structure["RethinkDB"].push(
+                                                    {
+                                                        "database":single_db_name,
+                                                        "table":single_table_name,
+                                                        "throw_channel_name1":single_table_name,
+                                                        "period":null,
+                                                        "receive_channel_name":single_table_name,
+                                                        "throw_channel_name2":"/inspect/"+single_db_name+"/"+single_table_name,
+                                                        "documents":number
+                                                    }
+                                                );
+                                                callback_forEach_in(null);
+                                            });
                                         },
                                         function(err)
                                         {
@@ -90,19 +95,16 @@ async.waterfall
                         );
                     }
 
-
                 },
                 function(err)
                 {
                     if(err) console.log(err);
-
-
                     callback_waterfall(null);
                 });
         },
         function (callback_waterfall)
         {
-            jsonfile.writeFile("./Setting_ODD_warning_and_listener_beta.json", DB_structure, {spaces: " "},
+            jsonfile.writeFile(filename, DB_structure, {spaces: " "},
                 function(err)
                 {
                     if(err) console.log(err);
