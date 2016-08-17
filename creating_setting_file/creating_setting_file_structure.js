@@ -7,7 +7,7 @@ var connection1=null;
 
 var clock = new Date();
 var DB_structure={"RethinkDB": [],"Record_Time":clock.getTime()};
-var filename = "./Setting_ODD_warning_and_listener_second_timing_point.json";
+var filename = "./Setting_ODD_warning_and_listener_full.json";
 
 
 async.waterfall

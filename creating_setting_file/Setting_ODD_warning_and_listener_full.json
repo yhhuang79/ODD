@@ -43,7 +43,7 @@
    "period": null,
    "receive_channel_name": "LASS_API",
    "throw_channel_name2": "/inspect/Heat_Wave/LASS_API",
-   "documents": 979448
+   "documents": 1008354
   },
   {
    "database": "Heat_Wave",
@@ -115,7 +115,7 @@
    "period": null,
    "receive_channel_name": "WBGT",
    "throw_channel_name2": "/inspect/Heat_Wave/WBGT",
-   "documents": 125304
+   "documents": 132752
   },
   {
    "database": "Heat_Wave",
@@ -466,7 +466,7 @@
    "period": null,
    "receive_channel_name": "Air_Q",
    "throw_channel_name2": "/inspect/hackathon_DB/Air_Q",
-   "documents": 314411
+   "documents": 318211
   },
   {
    "database": "hackathon_DB",
@@ -475,7 +475,7 @@
    "period": null,
    "receive_channel_name": "Parse_Log",
    "throw_channel_name2": "/inspect/hackathon_DB/Parse_Log",
-   "documents": 52885
+   "documents": 53754
   },
   {
    "database": "hackathon_DB",
@@ -502,7 +502,7 @@
    "period": null,
    "receive_channel_name": "air_labeld",
    "throw_channel_name2": "/inspect/real_time_TP_grid_data/air_labeld",
-   "documents": 15786
+   "documents": 16542
   },
   {
    "database": "real_time_TP_grid_data",
@@ -511,7 +511,7 @@
    "period": null,
    "receive_channel_name": "labled",
    "throw_channel_name2": "/inspect/real_time_TP_grid_data/labled",
-   "documents": 93888
+   "documents": 99216
   },
   {
    "database": "real_time_TP_grid_data",
@@ -520,7 +520,7 @@
    "period": null,
    "receive_channel_name": "unlabled",
    "throw_channel_name2": "/inspect/real_time_TP_grid_data/unlabled",
-   "documents": 5848986
+   "documents": 6181098
   },
   {
    "database": "test",
@@ -592,7 +592,7 @@
    "period": null,
    "receive_channel_name": "air",
    "throw_channel_name2": "/inspect/test/air",
-   "documents": 816932
+   "documents": 820428
   },
   {
    "database": "test",
@@ -628,7 +628,7 @@
    "period": null,
    "receive_channel_name": "real_time_test",
    "throw_channel_name2": "/inspect/test/real_time_test",
-   "documents": 524
+   "documents": 769
   },
   {
    "database": "test",
@@ -673,7 +673,7 @@
    "period": null,
    "receive_channel_name": "tw_weather",
    "throw_channel_name2": "/inspect/test/tw_weather",
-   "documents": 1295654
+   "documents": 1304830
   },
   {
    "database": "test",
@@ -682,8 +682,8 @@
    "period": null,
    "receive_channel_name": "weather",
    "throw_channel_name2": "/inspect/test/weather",
-   "documents": 288745
+   "documents": 289945
   }
  ],
- "Record_Time": 1471242530997
+ "Record_Time": 1471419979585
 }

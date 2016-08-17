@@ -1,10 +1,7 @@
 var async = require('async');
 var jsonfile = require('jsonfile');
 
-var ODD_structure = require('./ODD_structure.json');
-var data_size = ODD_structure["RethinkDB"].length;
-
-
+var ODD_structure = require('./Setting_ODD_warning_and_listener_full.json');
 
 var mapping_array={};
 var mapping_array_file = "./mapping_array.json"; //result file name
@@ -80,9 +77,9 @@ async.waterfall(
                 });
             };
 
-            for(var receive_channel_name in mapping_array)
+            for(var receive_channel_name2 in mapping_array)
             {
-                update_listener(receive_channel_name);
+                update_listener(receive_channel_name2);
             }
 
             // update_listener("/inspect/hackathon_DB/Parse_Log");

@@ -3,8 +3,8 @@ var rethinkdbHost = "140.109.18.136";
 var r = require('rethinkdb');
 var connection_socket = null;
 
-var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_first_timing_point.json");
-// var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener.json");
+var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_full.json");
+// var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_test.json");
 
 var ODD_size=setting_ODD["RethinkDB"].length;
 var setting_array=setting_ODD["RethinkDB"];
