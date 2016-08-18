@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var setting_file = require('../public/javascripts/dynamic_and_static_tables_classifying.json');
-
+var GET_storage_and_documents_in_RethinkDB = require("../module_js/GET_storage_and_documents_in_RethinkDB");
 
 var async = require('async');
 
@@ -20,16 +20,41 @@ router.get('/', function(req, res, next) {
                         var database_name = name_array[2];
                         var table_name = name_array[3];
 
-                        updating_table_channel_name_array.push(
-                            {
-                                "container_id":  container_id,
-                                "database_name": database_name,
-                                "table_name":    table_name
-                            }
+                        async.parallelLimit(
+                             {
+                                storage_and_documents: function(callback_parallelLimit)
+                                {
+                                    GET_storage_and_documents_in_RethinkDB.
+                                    GET_storage_and_documents(database_name,table_name,
+                                        function(storage_and_documents)
+                                        {
+                                            console.log(storage_and_documents["storage"]);
+                                            callback_parallelLimit(null,storage_and_documents);
+                                        });
+                                }
+                             },1,
+                             function(err, results)
+                             {
+                                 //console.log(results["storage_and_documents"]);
 
-                        );
+                                 updating_table_channel_name_array.push(
+                                     {
+                                         "container_id":  container_id,
+                                         "database_name": database_name,
+                                         "table_name":    table_name,
+                                         "storage":results["storage_and_documents"]["storage"],
+                                         "documents":results["storage_and_documents"]["documents"]
+                                     }
 
-                        forEachOfLimit_callback(null);
+                                 );
+
+                                 forEachOfLimit_callback(null);
+                                    // results is now equals to: {one: 1, two: 2}
+                             }
+                         );
+
+
+
                     },
                     function (err)
                     {

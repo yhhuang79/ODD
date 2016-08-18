@@ -3,6 +3,8 @@ var r = require('rethinkdb');
 var rethinkdbHost = "140.109.18.136";
 var warning_machine=null;
 var email_system_module = require("./email_system_module");
+var GET_storage_and_documents_in_RethinkDB = require("./GET_storage_and_documents_in_RethinkDB")
+
 
 module.exports =
 {
@@ -42,7 +44,16 @@ module.exports =
                 {
                     console.log('\nFrom database:',database_name,'and table:',table_name,'----------------------------------------------------');
                     console.log("1.emit changed data to app.js by channel:",throw_channel_name);
-                    socket.emit(throw_channel_name, { thrower: item });
+
+                    socket.emit(throw_channel_name,
+                        {
+                            thrower: item,  // the last row data
+                            table_status:
+                            {
+                             "documents":null,
+                             "storage":null
+                            }
+                        });
 
 
                     //clearTimeout(timer);

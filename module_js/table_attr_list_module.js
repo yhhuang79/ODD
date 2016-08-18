@@ -1,3 +1,4 @@
+// used by tree_configuration.js
 var async = require('async');
 var r = require('rethinkdb');
 var rethinkdbHost = "140.109.18.136";

@@ -1,3 +1,5 @@
+var GET_storage_and_documents_in_RethinkDB = require("../module_js/GET_storage_and_documents_in_RethinkDB");
+
 var express = require('express');
 var router = express.Router();
 
@@ -60,7 +62,18 @@ router.get('/:database/:table', function(req, res, next) {
                                 }
 
                             });
+                        },
+                        "storage_and_documents":function(callback_parallel)
+                        {
+                            GET_storage_and_documents_in_RethinkDB.
+                            GET_storage_and_documents(database_name,table_name,
+                                function(storage_and_documents)
+                                {
+                                    callback_parallel(storage_and_documents);
+                                }
+                            )
                         }
+
                     },1,
                     function(err, results)
                     {
@@ -81,7 +94,7 @@ router.get('/:database/:table', function(req, res, next) {
                             {
                                 var header = offer_attribute(results["request"][0]);
                                 //console.log(header);
-                                callback_waterfall(null, header ,results["request"]);
+                                callback_waterfall(null, header ,results["request"],results["storage_and_documents"]);
                             }
 
                         }
@@ -90,7 +103,7 @@ router.get('/:database/:table', function(req, res, next) {
                 );
 
             },
-            function(header,data, callback_waterfall)
+            function(header,data,storage_and_documents, callback_waterfall)
             {
                 //console.log(header);
                 //console.log(data);
@@ -115,7 +128,9 @@ router.get('/:database/:table', function(req, res, next) {
                             database_name:database_name,
                             table_name:table_name,
                             header:header,
-                            data: data
+                            data: data,
+                            storage:storage_and_documents[0],
+                            documents:storage_and_documents[1]
                         });
 
                     callback_waterfall(null);
