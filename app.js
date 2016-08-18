@@ -15,7 +15,7 @@ var tree_configuration = require('./routes/tree_configuration');
 
 var one_for_all_test = require('./routes/one_for_all_test');
 
-var dashboard_updating = require('./routes/dashboard_updating');
+var dashboard = require('./routes/dashboard');
 
 var io = require('socket.io')();
 var app = express();
@@ -55,9 +55,7 @@ app.use('/test_template',test_template);
 app.use('/tree_page2',tree_page2);
 app.use('/tree_configuration',tree_configuration);
 
-app.use('/dashboard_updating',dashboard_updating);
-
-
+app.use('/dashboard',dashboard);
 
 
 // catch 404 and forward to error handler
