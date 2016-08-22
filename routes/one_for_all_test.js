@@ -1,4 +1,4 @@
-var GET_storage_and_documents_in_RethinkDB = require("../module_js/GET_storage_and_documents_in_RethinkDB");
+var GET_storage_and_documents_in_RethinkDB = require("../module_js/GET_in_DB");
 
 var express = require('express');
 var router = express.Router();

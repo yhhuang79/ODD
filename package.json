@@ -15,6 +15,7 @@
     "express": "~4.13.4",
     "json": "^9.0.4",
     "jsonfile": "^2.3.1",
+    "moment": "^2.14.1",
     "morgan": "~1.7.0",
     "nodemailer": "^2.5.0",
     "rethinkdb": "^2.3.2",

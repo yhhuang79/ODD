@@ -1,10 +1,30 @@
-var GET = require("../../module_js/GET_storage_and_documents_in_RethinkDB");
+// var GET = require("../../module_js/GET_in_DB");
+//
+// GET.storage_and_documents("merivan_database","prediction",
+//     function(storage,documents)
+//     {
+//         console.log("storage:",storage,"documents:",documents)
+//     })
+var moment = require('moment');
 
-GET.GET_storage_and_documents("merivan_database","prediction",
-    function(storage,documents)
-    {
-        console.log("storage:",storage,"documents:",documents)
-    })
+// var test = moment().format('lll');
+// var test2 = moment().add(3, 'hours').format('lll');
+
+
+
+var test = moment();
+var test2 = test.format('MMMM Do YYYY, h:mm:ss a');
+var test3 = test.add(15, 'seconds').format('MMMM Do YYYY, h:mm:ss a');
+
+
+console.log(test2,'\n',test3);
+//
+// function  test(ABC,callback){
+//   console.log(ABC);
+//     callback("123","456");
+// };
+//
+// test("ABC",function(string1,string2){console.log(string2)});
 
 
 

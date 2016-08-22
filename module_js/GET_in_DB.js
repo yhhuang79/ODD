@@ -5,7 +5,7 @@ var connection1=null;
 
 module.exports =
 {
-    GET_storage_and_documents:function(database_name, table_name,callback)
+    storage_and_documents:function(database_name, table_name,callback)
     {
 
         async.waterfall

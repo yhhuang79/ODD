@@ -13,6 +13,8 @@
     <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
 
+    <script src="./javascripts/moment.js"></script>
+
 </head>
 <body>
 
@@ -46,16 +48,26 @@
                         <h3>Active Tables</h3>
                         <div class="panel-group">
                             <div class="row">
-                                <% for(var i=0; i< updating_table_channel_name_array.length;i++){ %>
-                                <div class="col-sm-4 ">
-                                    <div class="thumbnail">
-                                        <div id= <%= updating_table_channel_name_array[i]["container_id"] %> style="height: 320px; min-width: 230px"></div>
-                                    <div class="caption">
-                                        <h3>Databse: <%= updating_table_channel_name_array[i]["database_name"] %>
-                                            <br>Table: <%= updating_table_channel_name_array[i]["table_name"] %></h3>
-                                        <p>documents:<%= updating_table_channel_name_array[i]["documents"] %>  size:<%= updating_table_channel_name_array[i]["storage"] %> bytes</p>
+                                <% for(var i=0; i< table_detail.length;i++){ %>
+
+                                    <div class="col-sm-4 ">
+                                        <div class="thumbnail"  id =<%= table_detail[i]["container_id"]+"_color" %> >
+                                            <div id= <%= table_detail[i]["container_id"] %> style="height: 320px; min-width: 230px"></div>
+                                        <div class="caption">
+                                            <h2>Database:   <%= table_detail[i]["database_name"] %>
+                                                <br>Table:   <%= table_detail[i]["table_name"] %>       </h2>
+                                            <font size="4">
+                                                <ul id = <%= table_detail[i]["container_id"]+"_list" %> >
+                                                    <li id="Last_update_time">              Last update time:  no update yet                                </li>
+                                                    <li id="Next_update_time">              Next update time:  null                                         </li>
+                                                    <li id="New_documents_number">   Last increase documents:  null                                         </li>
+                                                    <li id="Period">                                  Period:  <%= table_detail[i]["period"] %> sec         </li>
+                                                    <li id="Documents">                            Documents:  <%= table_detail[i]["documents"] %>          </li>
+                                                    <li id="Size">                                      Size:  <%= table_detail[i]["storage"]/1000000 %> MB </li>
+                                                </ul>
+                                            </font>
+                                        </div>
                                     </div>
-                                </div>
                             </div>
                             <% }; %>
                         </div>
@@ -64,6 +76,7 @@
                     <div id="Statistics" class="tab-pane fade">
                         <h3>Statistics</h3>
                         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div id="donut_container" style="width: 1200px; height: 800px; margin: 0 auto"></div>
                     </div>
                     <div id="Others" class="tab-pane fade">
                         <h3>Others</h3>
@@ -85,8 +98,14 @@
 <!-- /#wrapper -->
 
 <script type="text/javascript" src="javascripts/test_template.js"></script>
+
 <script src="./socket.io/socket.io.js"></script>
-<script type="text/javascript" src="javascripts/live_chart.js"></script>
+
+<script type="text/javascript" src="javascripts/live_chart_and_data_update.js"></script>
+
+<script type="text/javascript" src="javascripts/donut_chart.js"></script>
+
+
 
 </body>
 </html>
