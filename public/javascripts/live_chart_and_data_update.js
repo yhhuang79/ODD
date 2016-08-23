@@ -119,7 +119,6 @@ var live_chart = function (container_name) {
         }
     );
 };
-
 var real_time_receiver = function (channel_name) {
     // var counter=0;
     var socket = io.connect("http://localhost:3001");
@@ -136,7 +135,6 @@ var real_time_receiver = function (channel_name) {
         var New_documents_number_value =  counter[channel_name.replace(/\//g, '_')];
         var Documents_value = new_data["app_js"]["table_status"]["documents"];
         var Size_value = new_data["app_js"]["table_status"]["storage"];
-
 
         status_table[  element_id_of_table_detail   ]["Last_update_time"]           = Last_update_time_value;
         status_table[  element_id_of_table_detail   ]["Next_update_time"]           = Next_update_time_value;
@@ -160,11 +158,7 @@ var real_time_receiver = function (channel_name) {
 
     });
 };
-
-
-
-function warning_machine(period,database_name,table_name,element_id_of_color)
-{
+function warning_machine(period,database_name,table_name,element_id_of_color) {
     document.getElementById(element_id_of_color).style.backgroundColor = my_green;
 
     var w=1;
@@ -177,13 +171,9 @@ function warning_machine(period,database_name,table_name,element_id_of_color)
         }
         ,period*1000);
 };
-function clear_warning_machine(timer)
-{
+function clear_warning_machine(timer) {
     clearTimeout(timer);
 };
-
-
-
 var update_function = function(element_id_of_table_detail){
 
     setInterval(function()
@@ -193,6 +183,7 @@ var update_function = function(element_id_of_table_detail){
         var New_documents_number_value      = status_table[  element_id_of_table_detail   ]["New_documents_number"];
         var Documents_value                 = status_table[  element_id_of_table_detail   ]["Documents"];
         var Size_value                      = status_table[  element_id_of_table_detail   ]["Size"];
+
         //console.log(status_table);
         if(Last_update_time_value != null)
         {
@@ -206,7 +197,6 @@ var update_function = function(element_id_of_table_detail){
     },update_period);
 
 }
-
 
 
 // $.getJSON( "./javascripts/dynamic_and_static_tables_classifying.json",
@@ -250,3 +240,4 @@ $.getJSON( "./javascripts/dynamic_and_static_tables_classifying_test.json",
         }
     }
 );
+

@@ -7,8 +7,9 @@ var connection1=null;
 
 var clock = new Date();
 var DB_structure={"RethinkDB": [],"Record_Time":clock.getTime()};
-var filename = "./Setting_ODD_warning_and_listener_full.json";
+var filename = "./Setting_ODD_warning_and_listener_full_2.json";
 
+var GET = require("../module_js/GET_in_DB");
 
 async.waterfall
 (
@@ -61,23 +62,37 @@ async.waterfall
                                     async.forEachOfLimit(tableList,1,
                                         function(single_table_name,key2,callback_forEach_in)
                                         {
-                                            r.db(single_db_name).table(single_table_name).count().run(connection1, function(err, number)
-                                            {
-                                                if (err) throw err;
-                                                //console.log(single_db_name,single_table_name
-                                                DB_structure["RethinkDB"].push(
+                                            async.parallelLimit(
+                                                {
+                                                    documents_and_storage: function(callback_parallelLimit)
                                                     {
-                                                        "database":single_db_name,
-                                                        "table":single_table_name,
-                                                        "throw_channel_name1":single_table_name,
-                                                        "period":null,
-                                                        "receive_channel_name":single_table_name,
-                                                        "throw_channel_name2":"/inspect/"+single_db_name+"/"+single_table_name,
-                                                        "documents":number
+                                                        GET.storage_and_documents(single_db_name,single_table_name,
+                                                            function(result)
+                                                            {
+                                                                callback_parallelLimit(null,result);
+                                                            });
                                                     }
-                                                );
-                                                callback_forEach_in(null);
-                                            });
+                                                },1,
+                                                function(err, results)
+                                                {
+                                                    if (err) throw err;
+                                                    DB_structure["RethinkDB"].push(
+                                                        {
+                                                            "database":single_db_name,
+                                                            "table":single_table_name,
+                                                            "throw_channel_name1":single_table_name,
+                                                            "period":null,
+                                                            "receive_channel_name":single_table_name,
+                                                            "throw_channel_name2":"/inspect/"+single_db_name+"/"+single_table_name,
+                                                            "documents":results["documents_and_storage"]["documents"],
+                                                            "storage":results["documents_and_storage"]["storage"]
+                                                        }
+                                                    );
+                                                    callback_forEach_in(null);
+                                                    // results is now equals to: {one: 1, two: 2}
+                                                }
+                                            );
+
                                         },
                                         function(err)
                                         {

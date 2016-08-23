@@ -1,4 +1,79 @@
 $(function () {
+    // Create the chart
+    $.getJSON( "./javascripts/statistics_data.json",
+        function( data )
+        {
+            var series_data_array = data["series_data_array"];
+            var drilldown_series_array = data["drilldown_series_array"];
+
+            $('#column_chart').highcharts({
+                chart: {  type: 'column'  },
+                title: {  text: 'RethinkDB Storage', style: {fontSize:'25px'} },
+                subtitle: {  text: 'Click the columns to view versions.', style: {fontSize:'15px'}},
+                xAxis: {
+                    type: 'category',
+                    labels:
+                    {
+                        style:
+                        {
+                            fontSize:'16px'
+                        }
+                    }
+                },
+                yAxis: {
+                    title:
+                    {
+                        text: 'Storage (MB)',
+                        style:
+                        {
+                            fontSize:'25px'
+                        }
+                    },
+
+                },
+                legend: { enabled: false },
+                plotOptions: {
+                    series:
+                    {
+                        borderWidth: 1,
+                        dataLabels:
+                        {
+                            enabled: true,
+                            format: '{point.y:.2f} MB',
+                            style:
+                            {
+                                fontSize:'20px'
+                            }
+
+                        }
+                    }
+                },
+                tooltip:
+                {
+                    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}</b> of total<br/>'
+                },
+                series:
+                    [
+                        {
+                            name: 'Database',
+                            colorByPoint: true,
+                            data: series_data_array
+                        }
+                    ],
+                drilldown:
+                {
+                    series: drilldown_series_array
+                }
+            });
+        }
+    );
+
+});
+
+
+
+$(function () {
 
     var colors = Highcharts.getOptions().colors,
         categories = ['MSIE', 'Firefox', 'Chrome', 'Safari', 'Opera'],

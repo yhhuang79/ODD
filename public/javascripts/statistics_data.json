@@ -1,0 +1,409 @@
+{
+ "series_data_array": [
+  {
+   "name": "AQI_inference",
+   "y": 363.819008,
+   "drilldown": "AQI_inference"
+  },
+  {
+   "name": "Complete_2015_data",
+   "y": 321.31328,
+   "drilldown": "Complete_2015_data"
+  },
+  {
+   "name": "Heat_Wave",
+   "y": 31291.47136,
+   "drilldown": "Heat_Wave"
+  },
+  {
+   "name": "SR_data",
+   "y": 70.564352,
+   "drilldown": "SR_data"
+  },
+  {
+   "name": "data_2015",
+   "y": 1475.748352,
+   "drilldown": "data_2015"
+  },
+  {
+   "name": "hackathon_DB",
+   "y": 79847.401984,
+   "drilldown": "hackathon_DB"
+  },
+  {
+   "name": "merivan_database",
+   "y": 9.2032,
+   "drilldown": "merivan_database"
+  },
+  {
+   "name": "real_time_TP_grid_data",
+   "y": 4330.080256,
+   "drilldown": "real_time_TP_grid_data"
+  },
+  {
+   "name": "test",
+   "y": 42071.89606400002,
+   "drilldown": "test"
+  }
+ ],
+ "drilldown_series_array": [
+  {
+   "name": "AQI_inference",
+   "id": "AQI_inference",
+   "data": [
+    [
+     "pm25_one_week",
+     363.819008
+    ]
+   ]
+  },
+  {
+   "name": "Complete_2015_data",
+   "id": "Complete_2015_data",
+   "data": [
+    [
+     "lable_data",
+     317.074944
+    ],
+    [
+     "unlable_data",
+     4.238336
+    ]
+   ]
+  },
+  {
+   "name": "Heat_Wave",
+   "id": "Heat_Wave",
+   "data": [
+    [
+     "LASS",
+     8.388608
+    ],
+    [
+     "LASS_API",
+     1789.169152
+    ],
+    [
+     "LASS_API_2016_03_06",
+     4479.71328
+    ],
+    [
+     "LASS_rawdata",
+     24597.449728
+    ],
+    [
+     "TP_Air_Quality",
+     62.364672
+    ],
+    [
+     "TP_Label_Geo_feature",
+     4.194304
+    ],
+    [
+     "TP_near_3_SN",
+     4.194304
+    ],
+    [
+     "VD_grid_ind",
+     4.194304
+    ],
+    [
+     "VD_gridind_week_hour",
+     16.2816
+    ],
+    [
+     "WBGT",
+     251.244544
+    ],
+    [
+     "grid_polygon_list",
+     4.194304
+    ],
+    [
+     "taipei_building_height",
+     65.888256
+    ],
+    [
+     "taipei_temple_location",
+     4.194304
+    ]
+   ]
+  },
+  {
+   "name": "SR_data",
+   "id": "SR_data",
+   "data": [
+    [
+     "466880",
+     6.28736
+    ],
+    [
+     "466900",
+     5.556736
+    ],
+    [
+     "466910",
+     2.097152
+    ],
+    [
+     "466920",
+     2.097152
+    ],
+    [
+     "466930",
+     2.097152
+    ],
+    [
+     "466940",
+     2.097152
+    ],
+    [
+     "466950",
+     2.097152
+    ],
+    [
+     "466990",
+     2.097152
+    ],
+    [
+     "467060",
+     2.097152
+    ],
+    [
+     "467080",
+     2.097152
+    ],
+    [
+     "467110",
+     2.097152
+    ],
+    [
+     "467300",
+     2.097152
+    ],
+    [
+     "467350",
+     2.097152
+    ],
+    [
+     "467410",
+     2.097152
+    ],
+    [
+     "467420",
+     2.097152
+    ],
+    [
+     "467440",
+     2.097152
+    ],
+    [
+     "467480",
+     2.097152
+    ],
+    [
+     "467490",
+     2.097152
+    ],
+    [
+     "467530",
+     2.097152
+    ],
+    [
+     "467540",
+     2.097152
+    ],
+    [
+     "467550",
+     2.097152
+    ],
+    [
+     "467571",
+     2.097152
+    ],
+    [
+     "467590",
+     2.097152
+    ],
+    [
+     "467610",
+     2.097152
+    ],
+    [
+     "467620",
+     2.097152
+    ],
+    [
+     "467650",
+     2.097152
+    ],
+    [
+     "467660",
+     2.097152
+    ],
+    [
+     "467770",
+     2.097152
+    ],
+    [
+     "467780",
+     2.097152
+    ],
+    [
+     "467990",
+     2.097152
+    ]
+   ]
+  },
+  {
+   "name": "data_2015",
+   "id": "data_2015",
+   "data": [
+    [
+     "air_q",
+     362.130944
+    ],
+    [
+     "geo",
+     2.097152
+    ],
+    [
+     "mcctb_Guting",
+     330.822656
+    ],
+    [
+     "vd",
+     7.96672
+    ],
+    [
+     "weather",
+     772.73088
+    ]
+   ]
+  },
+  {
+   "name": "hackathon_DB",
+   "id": "hackathon_DB",
+   "data": [
+    [
+     "Air_Q",
+     198.012928
+    ],
+    [
+     "Parse_Log",
+     79.596544
+    ],
+    [
+     "VD",
+     79569.792512
+    ]
+   ]
+  },
+  {
+   "name": "merivan_database",
+   "id": "merivan_database",
+   "data": [
+    [
+     "prediction",
+     9.2032
+    ]
+   ]
+  },
+  {
+   "name": "real_time_TP_grid_data",
+   "id": "real_time_TP_grid_data",
+   "data": [
+    [
+     "air_labeld",
+     9.469952
+    ],
+    [
+     "labled",
+     68.674048
+    ],
+    [
+     "unlabled",
+     4251.936256
+    ]
+   ]
+  },
+  {
+   "name": "test",
+   "id": "test",
+   "data": [
+    [
+     "ExpLaborData",
+     2.097152
+    ],
+    [
+     "GeoLocation",
+     4.194304
+    ],
+    [
+     "Geo_Features",
+     4.194304
+    ],
+    [
+     "Location",
+     4.194304
+    ],
+    [
+     "Plash_intern_diary",
+     150.340608
+    ],
+    [
+     "TP_VD_traffic",
+     35266.120192
+    ],
+    [
+     "Total_Loc_A_S_W",
+     2.097152
+    ],
+    [
+     "air",
+     2490.1888
+    ],
+    [
+     "grid_lon_lat",
+     2.097152
+    ],
+    [
+     "laborSensorData",
+     99.7888
+    ],
+    [
+     "quakes",
+     2.097152
+    ],
+    [
+     "real_time_test",
+     2.097152
+    ],
+    [
+     "solar_stations",
+     2.097152
+    ],
+    [
+     "taiwan_hot_test",
+     4.194304
+    ],
+    [
+     "test_insert_now",
+     2.097152
+    ],
+    [
+     "tutorial_tb",
+     2.097152
+    ],
+    [
+     "tw_weather",
+     3259.172352
+    ],
+    [
+     "weather",
+     772.73088
+    ]
+   ]
+  }
+ ]
+}
