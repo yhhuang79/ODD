@@ -9,17 +9,14 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var ODD_test = require('./routes/ODD_test');
 var test_template = require('./routes/test_template');
-
-var tree_page2 = require('./routes/tree_page2');
 var tree_configuration = require('./routes/tree_configuration');
-
+var tree_configuration_display = require('./routes/tree_configuration_display');
 var one_for_all_test = require('./routes/one_for_all_test');
-
 var dashboard = require('./routes/dashboard');
+
 
 var io = require('socket.io')();
 var app = express();
-
 var real_time_listener_receiver_thrower = require("./module_js/real_time_listener_receiver_thrower");
 real_time_listener_receiver_thrower.initiate_listener();
 real_time_listener_receiver_thrower.initiate_middle_receiver_and_thrower(io);
@@ -47,15 +44,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/inspect',one_for_all_test);
-app.use('/users', users);
-app.use('/ODD_test',ODD_test);
-app.use('/test_template',test_template);
-
-app.use('/tree_page2',tree_page2);
-app.use('/tree_configuration',tree_configuration);
-
 app.use('/dashboard',dashboard);
+app.use('/tree_configuration',tree_configuration);
+app.use('/tree_configuration_display',tree_configuration_display);
+app.use('/inspect',one_for_all_test);
+
+
+//app.use('/users', users);
+//app.use('/ODD_test',ODD_test);
+//app.use('/test_template',test_template);
+
+
+
+
+
 
 
 // catch 404 and forward to error handler

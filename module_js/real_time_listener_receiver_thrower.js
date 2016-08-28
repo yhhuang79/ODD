@@ -3,12 +3,15 @@ var rethinkdbHost = "140.109.18.136";
 var r = require('rethinkdb');
 var connection_socket = null;
 
-// var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_full.json");
-// var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_test.json");
+// // checking period mode
+// // var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_full.json");
+// var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_full_2.json");
+// // var setting_ODD= require("../creating_setting_file/Setting_ODD_warning_and_listener_test.json");
 // var ODD_size=setting_ODD["RethinkDB"].length;
 // var setting_array=setting_ODD["RethinkDB"];
+// //console.log(ODD_size);
 
-
+// running mode
 // var setting_ODD= require("../public/javascripts/dynamic_and_static_tables_classifying.json");
 var setting_ODD= require("../public/javascripts/dynamic_and_static_tables_classifying_test.json");
 var ODD_size=setting_ODD["RethinkDB"]["dynamic table"].length;

@@ -1,7 +1,7 @@
 var async = require('async');
 var jsonfile = require('jsonfile');
 
-var ODD_structure = require('./Setting_ODD_warning_and_listener_full.json');
+var ODD_structure = require('./Setting_ODD_warning_and_listener_full_2.json');
 
 var mapping_array={};
 var mapping_array_file = "./mapping_array.json"; //result file name
@@ -14,11 +14,11 @@ var classification=
         "static table":[]
     }
 };
-var classification_file = "./dynamic_and_static_tables_classifying.json"; //result file name
+var classification_file = "./dynamic_and_static_tables_classifying3.json"; //result file name
 
 
 var closed_time =  100; // sec
-var duration    = 7200;  //sec
+var duration    = 3600*1;  //sec
 
 var clock=0;
 setInterval(function(){console.log(++clock+' sec');},1000);

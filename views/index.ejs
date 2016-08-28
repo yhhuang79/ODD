@@ -26,15 +26,62 @@
         <span class="hamb-bottom"></span>
       </button>
       <div class="container-fluid">
-        <div class="col-xs-0"></div>
-        <div class="col-xs-12">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-10">
           <h1><%= title %></h1>
-          <p> <%= title %> page</p>
+
+          <br>
+
+          <div class="col-xs-6">
+            <h2>Introduction of Web Pages</h2>
+            <font size="4">
+              <h3>Dashboard</h3>
+              <p>
+                Dashboard web page is the monitor for all active tables in PlASH RethinkDB.
+                Users can inspect every table's dynamic line chart, the latest update time
+                and its next update estimation, period and so on.
+                Statistics tab provides the information about
+                the distribution of the storage for all databases and tables.
+              </p>
+              <h3>RethinkDB Configuration</h3>
+              <p>
+                There is data visualization (Collapsible Tree) in this page.
+                Users can realize the whole structure of current RethinkDB
+                including databases, tables and nested attributes.
+                This visualization is not static but updating with current RethinkDB.
+              </p>
+              <h3>Data Query and Download Service</h3>
+              <p>
+                Instead of obtaining data by commands, users can use the user interface
+                to decide data of database/tables from single or all devices in a specific time.
+                The output format is only JSON file. We will offer other file formats in the future.
+              </p>
+
+              <h3>Notification system by e-mail (backend)</h3>
+              <p>
+                Web administrators will get notification as one table's data flow malfunctions. That is,
+                ODD website is checking active tables all the time.
+                When one table is not updated for a long time set by administrators,
+                an e-mail will be sent from the server's backend.
+              </p>
+              <h3>Notification system (Slack website) (backend)</h3>
+              <p>
+                Coming Soon...
+              </p>
+              <br><br><br><br><br><br><br>
+
+            </font>
+
+          </div>
+          <div class="col-xs-1"></div>
+
+
+
 
 
 
         </div>
-        <div class="col-xs-0"></div>
+        <div class="col-xs-1"></div>
       </div>
     </div>
     <!-- /#page-content-wrapper -->

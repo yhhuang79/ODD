@@ -17,7 +17,6 @@ async.waterfall
         function(callback_waterfall)
         {
             r.connect( {host: rethinkdbHost, port: 28015}, function(err, conn) {
-
                 if (err) throw err;
                 callback_waterfall(null, conn );
                 //connection = conn;

@@ -12,12 +12,19 @@ var moment = require('moment');
 
 
 
-var test = moment();
-var test2 = test.format('MMMM Do YYYY, h:mm:ss a');
-var test3 = test.add(15, 'seconds').format('MMMM Do YYYY, h:mm:ss a');
+// var test = moment();
+// var test2 = test.format('MMMM Do YYYY, h:mm:ss a');
+// var test3 = test.add(15, 'seconds').format('MMMM Do YYYY, h:mm:ss a');
+//
+//
+// console.log(test2,'\n',test3);
 
 
-console.log(test2,'\n',test3);
+// console.log(JSON.stringify({"test":1111},null,"\t"));
+
+var desired = "AA A  A AAA$#$#$%   %&#$".replace(/[^\w]/gi, 'B');
+console.log(desired);
+
 //
 // function  test(ABC,callback){
 //   console.log(ABC);
