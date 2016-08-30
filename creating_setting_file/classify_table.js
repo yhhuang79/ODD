@@ -17,8 +17,8 @@ var classification=
 var classification_file = "./dynamic_and_static_tables_classifying3.json"; //result file name
 
 
-var closed_time =  100; // sec
-var duration    = 3600*1;  //sec
+var closed_time =  200; // sec
+var duration    = 3600*4;  //sec
 
 var clock=0;
 setInterval(function(){console.log(++clock+' sec');},1000);

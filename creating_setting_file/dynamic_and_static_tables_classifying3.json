@@ -5,34 +5,34 @@
     "database": "Heat_Wave",
     "table": "LASS_API",
     "throw_channel_name1": "LASS_API",
-    "period": "428",
+    "period": "333",
     "receive_channel_name": "LASS_API",
     "throw_channel_name2": "/inspect/Heat_Wave/LASS_API",
     "documents": 1114699,
     "storage": 1837130752,
     "update_timing_record": [
-     "1472382001",
-     "1472381082",
-     "1472380976",
-     "1472380793",
-     "1472380689",
-     "1472379859"
+     "1472404426",
+     "1472404205",
+     "1472403910",
+     "1472403318",
+     "1472403109",
+     "1472402859",
+     "1472402391",
+     "1472402064",
+     "1472401763"
     ]
    },
    {
     "database": "data_2015",
     "table": "weather",
     "throw_channel_name1": "weather",
-    "period": "166",
+    "period": "NaN",
     "receive_channel_name": "weather",
     "throw_channel_name2": "/inspect/data_2015/weather",
     "documents": 69974,
     "storage": 774496256,
     "update_timing_record": [
-     "1472380870",
-     "1472380584",
-     "1472380484",
-     "1472380373"
+     "1472401814"
     ]
    },
    {
@@ -45,93 +45,99 @@
     "documents": 333107,
     "storage": 200391168,
     "update_timing_record": [
-     "1472380775"
+     "1472402295"
     ]
    },
    {
     "database": "hackathon_DB",
     "table": "Parse_Log",
     "throw_channel_name1": "Parse_Log",
-    "period": "641",
+    "period": "590",
     "receive_channel_name": "Parse_Log",
     "throw_channel_name2": "/inspect/hackathon_DB/Parse_Log",
     "documents": 56354,
     "storage": 81643520,
     "update_timing_record": [
-     "1472382003",
-     "1472380764",
-     "1472380360",
-     "1472380080"
+     "1472404173",
+     "1472402861",
+     "1472402546",
+     "1472402292",
+     "1472401812"
+    ]
+   },
+   {
+    "database": "real_time_TP_grid_data",
+    "table": "air_labeld",
+    "throw_channel_name1": "air_labeld",
+    "period": "NaN",
+    "receive_channel_name": "air_labeld",
+    "throw_channel_name2": "/inspect/real_time_TP_grid_data/air_labeld",
+    "documents": 20106,
+    "storage": 9438720,
+    "update_timing_record": [
+     "1472403789"
     ]
    },
    {
     "database": "real_time_TP_grid_data",
     "table": "labled",
     "throw_channel_name1": "labled",
-    "period": "796",
+    "period": "730",
     "receive_channel_name": "labled",
     "throw_channel_name2": "/inspect/real_time_TP_grid_data/labled",
     "documents": 119286,
     "storage": 72104960,
     "update_timing_record": [
-     "1472380689",
-     "1472379893"
+     "1472402822",
+     "1472402092"
     ]
    },
    {
     "database": "real_time_TP_grid_data",
     "table": "unlabled",
     "throw_channel_name1": "unlabled",
-    "period": "148",
+    "period": "310",
     "receive_channel_name": "unlabled",
     "throw_channel_name2": "/inspect/real_time_TP_grid_data/unlabled",
     "documents": 7428762,
     "storage": 4440314368,
     "update_timing_record": [
-     "1472382063",
-     "1472381955",
-     "1472381827",
-     "1472381588",
-     "1472381477",
-     "1472381354",
-     "1472381228",
-     "1472381107",
-     "1472380991",
-     "1472380888",
-     "1472380705",
-     "1472380432",
-     "1472380293",
-     "1472380106",
-     "1472379987"
+     "1472404382",
+     "1472404179",
+     "1472403974",
+     "1472403735",
+     "1472403434",
+     "1472403190",
+     "1472402913",
+     "1472402211"
     ]
    },
    {
     "database": "test",
     "table": "tw_weather",
     "throw_channel_name1": "tw_weather",
-    "period": "NaN",
+    "period": "1222",
     "receive_channel_name": "tw_weather",
     "throw_channel_name2": "/inspect/test/tw_weather",
     "documents": 1341626,
     "storage": 3282046976,
     "update_timing_record": [
-     "1472380493"
+     "1472404260",
+     "1472402704",
+     "1472401816"
     ]
    },
    {
     "database": "test",
     "table": "weather",
     "throw_channel_name1": "weather",
-    "period": "166",
+    "period": "NaN",
     "receive_channel_name": "weather",
     "throw_channel_name2": "/inspect/test/weather",
     "documents": 294673,
     "storage": 774496256,
     "update_timing_record": [
-     "1472380870",
-     "1472380584",
-     "1472380484",
-     "1472380373"
+     "1472401814"
     ]
    }
   ],
@@ -594,15 +600,6 @@
     "throw_channel_name2": "/inspect/merivan_database/prediction",
     "documents": 17771,
     "storage": 9203200
-   },
-   {
-    "database": "real_time_TP_grid_data",
-    "table": "air_labeld",
-    "throw_channel_name1": "air_labeld",
-    "receive_channel_name": "air_labeld",
-    "throw_channel_name2": "/inspect/real_time_TP_grid_data/air_labeld",
-    "documents": 20106,
-    "storage": 9438720
    },
    {
     "database": "test",

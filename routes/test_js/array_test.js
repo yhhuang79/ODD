@@ -11,19 +11,44 @@ var moment = require('moment');
 // var test2 = moment().add(3, 'hours').format('lll');
 
 
-
 // var test = moment();
 // var test2 = test.format('MMMM Do YYYY, h:mm:ss a');
 // var test3 = test.add(15, 'seconds').format('MMMM Do YYYY, h:mm:ss a');
 //
+// var day = moment.unix(1472440502).format('YYYY-MM-DD hh:mm:ss');
+// console.log(day);
 //
+// var back = moment('2016-08-29 11:15:02').unix();
+// console.log(back);
+
+// var test = [{"1":1},{"1":2},{"1":3}];
+//
+// var test = [1,2,3] ;
+// for(var i in test)
+// {
+//     console.log(i);
+//     //console.log(test[i]);
+// }
+
+// if(("true" === "false"))
+// {
+//     console.log(1);
+// }
+// else
+// {
+//     console.log(2);
+// }
 // console.log(test2,'\n',test3);
 
 
+var a=b=c=1;
+
+console.log(a,b,c)
+
 // console.log(JSON.stringify({"test":1111},null,"\t"));
 
-var desired = "AA A  A AAA$#$#$%   %&#$".replace(/[^\w]/gi, 'B');
-console.log(desired);
+// var desired = "AA A  A AAA$#$#$%   %&#$".replace(/[^\w]/gi, 'B');
+// console.log(desired);
 
 //
 // function  test(ABC,callback){

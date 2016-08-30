@@ -11,7 +11,7 @@ var ODD_test = require('./routes/ODD_test');
 var test_template = require('./routes/test_template');
 var tree_configuration = require('./routes/tree_configuration');
 var tree_configuration_display = require('./routes/tree_configuration_display');
-var one_for_all_test = require('./routes/one_for_all_test');
+var data_query = require('./routes/data_query');
 var dashboard = require('./routes/dashboard');
 
 
@@ -47,7 +47,7 @@ app.use('/', index);
 app.use('/dashboard',dashboard);
 app.use('/tree_configuration',tree_configuration);
 app.use('/tree_configuration_display',tree_configuration_display);
-app.use('/inspect',one_for_all_test);
+app.use('/inspect',data_query);
 
 
 //app.use('/users', users);

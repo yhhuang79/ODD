@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-// var setting_file = require('../public/javascripts/dynamic_and_static_tables_classifying.json');
-var setting_file = require('../public/javascripts/dynamic_and_static_tables_classifying_test.json');
+var setting_file = require('../public/javascripts/dynamic_and_static_tables_classifying.json');
+// var setting_file = require('../public/javascripts/dynamic_and_static_tables_classifying_test.json');
 var GET = require("../module_js/GET_in_DB");
 
 var async = require('async');

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='/stylesheets/style2.css' >
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/js/bootstrap-select.min.js"></script>
+
+
+</head>
+<body>
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <% include templates/sidebar.ejs %>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <h1><%= title %></h1>
+
+                <br>
+
+                <h4>Please Select Database/Table</h4>
+                <div class="row">
+                    <div class="col-xs-3" >
+                        <select class="selectpicker" data-live-search="true" id="DB_and_table" title="Choose one of the following">
+                            <optgroup label="Heat_Wave">
+                                <option value="WBGT">WBGT</option>
+                                <option value="LASS_API">LASS_API</option>
+                            </optgroup>
+                            <optgroup label="data_2015">
+                                <option value="weather">weather</option>
+                            </optgroup>
+                            <optgroup label="hackathon_DB">
+                                <option value="Air_Q">Air_Q</option>
+                            </optgroup>
+                            <optgroup label="real_time_TP_grid_data">
+                                <option value="air_labeld">air_labeld</option>
+                                <option value="labled">labled</option>
+                                <option value="unlabled">unlabled</option>
+                            </optgroup>
+                            <optgroup label="test">
+                                <option value="air">air</option>
+                                <option value="tw_weather">tw_weather</option>
+                                <option value="weather">weather</option>
+                            </optgroup>
+                            <!--
+                            <input type="button" value="submit" class="btn btn-info btn-lg" id="DB_and_table_button" onclick="DB_and_table_function()">
+                            -->
+
+                        </select>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-xs-3" id="deivce_or_not">
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-xs-3" id="select_device">
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-xs-6" id="select_time">
+                    </div>
+                </div>
+
+                <br>
+
+                <font size="5">
+                <div class="row">
+                    <div class="col-xs-3" id="output">
+                    </div>
+                </div>
+                </font>
+
+                <br>
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <!--
+                <form id="data_query_form">
+                    <div>
+                        <textarea class="form-control" id="query_text" rows="3"></textarea>
+                        <br>
+                        <input type="submit" class="btn btn-info btn-lg">
+                    </div>
+                </form>
+
+                <br><br>
+
+                <font size="3"><div id="go"><p>Output: <br>This will be changed</p></div></font>
+                <font size="5"><div id="jsonlink"><p>link here</p></div></font>
+                -->
+                <br><br><br>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<script type="text/javascript" src="../javascripts/test_template.js"></script>
+<script type="text/javascript" src="../javascripts/data_query_process.js"></script>
+
+
+</body>
+</html>

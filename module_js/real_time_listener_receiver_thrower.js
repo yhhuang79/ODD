@@ -12,8 +12,8 @@ var connection_socket = null;
 // //console.log(ODD_size);
 
 // running mode
-// var setting_ODD= require("../public/javascripts/dynamic_and_static_tables_classifying.json");
-var setting_ODD= require("../public/javascripts/dynamic_and_static_tables_classifying_test.json");
+var setting_ODD= require("../public/javascripts/dynamic_and_static_tables_classifying.json");
+// var setting_ODD= require("../public/javascripts/dynamic_and_static_tables_classifying_test.json");
 var ODD_size=setting_ODD["RethinkDB"]["dynamic table"].length;
 var setting_array=setting_ODD["RethinkDB"]["dynamic table"];
 
