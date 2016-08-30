@@ -20,6 +20,7 @@
     "nodemailer": "^2.5.0",
     "rethinkdb": "^2.3.2",
     "serve-favicon": "~2.3.0",
+    "slackbots": "^0.5.2",
     "socket.io": "^1.4.8",
     "socket.io-client": "^1.4.8"
   },

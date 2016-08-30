@@ -1,0 +1,12 @@
+-----------------------------------------------------------------------------
+full mode:"./javascripts/dynamic_and_static_tables_classifying.json",
+two mode:"./javascripts/dynamic_and_static_tables_classifying_test.json"
+
+Change this in
+1. dashboard.js,
+2. real_time_listener_receiver_thrower.js
+3. live_chart_and_data_update.js
+------------------------------------------------------------------------------
+Open email mode:
+uncomment 33th line in real_time_module.js
+--------------------------------------------------------------------------------

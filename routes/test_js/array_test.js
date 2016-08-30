@@ -5,7 +5,7 @@
 //     {
 //         console.log("storage:",storage,"documents:",documents)
 //     })
-var moment = require('moment');
+// var moment = require('moment');
 
 // var test = moment().format('lll');
 // var test2 = moment().add(3, 'hours').format('lll');
@@ -40,10 +40,10 @@ var moment = require('moment');
 // }
 // console.log(test2,'\n',test3);
 
-
-var a=b=c=1;
-
-console.log(a,b,c)
+//
+// var a=b=c=1;
+//
+// console.log(a,b,c)
 
 // console.log(JSON.stringify({"test":1111},null,"\t"));
 
@@ -142,8 +142,53 @@ console.log(a,b,c)
 //
 //
 
+//----------------------------------------------------------------
+var SlackBot = require('slackbots');
+
+// create a bot
+var bot = new SlackBot({
+    token: 'xoxb-74267961879-gTkTCFvd9ymja4BdID2Vt0hU', // Add a bot https://my.slack.com/services/new/bot and put the token
+    name: 'ODD BOT'
+});
+
+bot.on('start', function() {
+    // more information about additional params https://api.slack.com/methods/chat.postMessage
+    var params = {
+        icon_emoji: ':scream_cat:'
+    };
+
+    console.log(bot.getUser('tinjuiho'));
+
+    // define channel, where bot exist. You can adjust it there https://my.slack.com/services
+    // bot.postMessageToChannel('plash-general', 'test test 1 2 3', params);
+
+    // define existing username instead of 'user_name'
+    // bot.postMessageToUser('tinjuiho', 'test test 1 2 3', params);
+    //
+    // bot.postMessageToUser('tinjuiho', 'hi', params,
+    //     function(data)
+    //     {
+    //         console.log(data);
+    //     });
+})
 
 
+console.log(bot.getChannels());
+bot.on('message', function(data) {
 
+    var params = {
+        icon_emoji: ':scream_cat:'
+    };
+    // all ingoing events https://api.slack.com/rtm
+    if(data.text=='ODD status')
+    {
+        bot.postMessageToUser('tinjuiho', 'all tables are normal!', params);
+    }
+    else if(data.text=='123')
+    {
+        bot.postMessageToUser('tonykuo', '456', params);
+    }
+
+});
 
 

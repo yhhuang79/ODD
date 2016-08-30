@@ -199,8 +199,8 @@ var update_function = function(element_id_of_table_detail){
 }
 
 
-$.getJSON( "./javascripts/dynamic_and_static_tables_classifying.json",
-// $.getJSON( "./javascripts/dynamic_and_static_tables_classifying_test.json",
+// $.getJSON( "./javascripts/dynamic_and_static_tables_classifying.json",
+$.getJSON( "./javascripts/dynamic_and_static_tables_classifying_test.json",
     function( data )
     {
         for(var single_obj_index in data["RethinkDB"]["dynamic table"])
