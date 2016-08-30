@@ -121,7 +121,7 @@ var live_chart = function (container_name) {
 };
 var real_time_receiver = function (channel_name) {
     // var counter=0;
-    var socket = io.connect("http://140.109.18.136:3006");
+    var socket = io.connect("http://140.109.18.141:3006");
     socket.on(channel_name, function (new_data) {
 
         //console.log(new_data);
