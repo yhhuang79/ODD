@@ -12,7 +12,7 @@ module.exports =
     real_time_change_listener:function(connection_socket, database_name, table_name, throw_channel_name, warning_period)
     {
         var io = require('socket.io-client');
-        var socket = io.connect('http://localhost:3006', {reconnect: true});
+        var socket = io.connect('http://140.109.18.136:3006', {reconnect: true});
         r.db(database_name).table(table_name).changes().run(connection_socket, function(err, cursor) {
 
             // test warning system
