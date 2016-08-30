@@ -2,13 +2,13 @@
   "RethinkDB": {
     "dynamic table": [
       {
-        "database": "Heat_Wave",
-        "table": "LASS_API",
-        "throw_channel_name1": "LASS_API",
-        "period": "300",
-        "receive_channel_name": "LASS_API",
-        "throw_channel_name2": "/inspect/Heat_Wave/LASS_API",
-        "documents": 977311,
+        "database": "test",
+        "table": "real_time_test",
+        "throw_channel_name1": "real_time_test",
+        "period": "50000",
+        "receive_channel_name": "real_time_test",
+        "throw_channel_name2": "/inspect/test/real_time_test",
+        "documents": 100,
         "update_timing_record": [
           "1471401762",
           "1471401462",
@@ -37,77 +37,16 @@
         ]
       },
       {
-        "database": "Heat_Wave",
-        "table": "WBGT",
-        "throw_channel_name1": "WBGT",
-        "period": "3600",
-        "receive_channel_name": "WBGT",
-        "throw_channel_name2": "/inspect/Heat_Wave/WBGT",
-        "documents": 124848,
-        "update_timing_record": [
-          "1471398496",
-          "1471394896"
-        ]
-      },
-      {
-        "database": "data_2015",
-        "table": "weather",
-        "throw_channel_name1": "weather",
-        "period": "3601",
-        "receive_channel_name": "weather",
-        "throw_channel_name2": "/inspect/data_2015/weather",
-        "documents": 69974,
-        "update_timing_record": [
-          "1471401008",
-          "1471397407"
-        ]
-      },
-      {
-        "database": "hackathon_DB",
-        "table": "Air_Q",
-        "throw_channel_name1": "Air_Q",
-        "period": "3600",
-        "receive_channel_name": "Air_Q",
-        "throw_channel_name2": "/inspect/hackathon_DB/Air_Q",
-        "documents": 314183,
-        "update_timing_record": [
-          "1471401308",
-          "1471397708"
-        ]
-      },
-      {
         "database": "hackathon_DB",
         "table": "Parse_Log",
         "throw_channel_name1": "Parse_Log",
-        "period": "300",
+        "period": "1000000",
         "receive_channel_name": "Parse_Log",
         "throw_channel_name2": "/inspect/hackathon_DB/Parse_Log",
-        "documents": 52821,
+        "documents": 99999,
         "update_timing_record": [
-          "1471401908",
-          "1471401608",
-          "1471401308",
-          "1471401011",
-          "1471400708",
-          "1471400410",
-          "1471400108",
-          "1471399808",
-          "1471399509",
-          "1471399208",
-          "1471398908",
-          "1471398609",
-          "1471398308",
-          "1471398009",
-          "1471397708",
-          "1471397408",
-          "1471397108",
-          "1471396808",
-          "1471396509",
-          "1471396208",
-          "1471395909",
-          "1471395608",
-          "1471395308",
-          "1471395008"
+          "1471398496",
+          "1471394896"
         ]
       }
     ],

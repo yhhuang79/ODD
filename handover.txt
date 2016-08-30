@@ -10,3 +10,15 @@ Change this in
 Open email mode:
 uncomment 33th line in real_time_module.js
 --------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+Ray: pm2, redhat, git,
