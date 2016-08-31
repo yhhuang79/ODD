@@ -121,7 +121,7 @@ var live_chart = function (container_name) {
 };
 var real_time_receiver = function (channel_name) {
     // var counter=0;
-    var socket = io.connect("http://odd.plash.tw:3006");
+    var socket = io.connect("http://odd.plash.tw");
     socket.on(channel_name, function (new_data) {
 
         //console.log(new_data);
