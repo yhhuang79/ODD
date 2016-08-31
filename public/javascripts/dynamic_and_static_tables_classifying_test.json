@@ -97,29 +97,6 @@
           "1471395770",
           "1471395170"
         ]
-      },
-      {
-        "database": "real_time_TP_grid_data",
-        "table": "unlabled",
-        "throw_channel_name1": "unlabled",
-        "period": "601",
-        "receive_channel_name": "unlabled",
-        "throw_channel_name2": "/inspect/real_time_TP_grid_data/unlabled",
-        "documents": 5824302,
-        "update_timing_record": [
-          "1471401782",
-          "1471401172",
-          "1471400572",
-          "1471399972",
-          "1471399373",
-          "1471398770",
-          "1471398173",
-          "1471397572",
-          "1471396972",
-          "1471396371",
-          "1471395771",
-          "1471395171"
-        ]
       }
 
     ],
