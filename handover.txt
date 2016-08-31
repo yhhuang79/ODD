@@ -14,7 +14,7 @@ uncomment 33th line of real_time_module.js
 How do we add an email address in this system?
 Add an email address on 14th line of email_system_module.js
 ------------------------------------------------------------------------------
-Locations of port or url:   ex. 3006 or http://140.109.18.141:3006
+Locations of port or url:   ex. 3006 or http://140.109.18.141:3006  http://odd.plash.tw:3006
 15th line in bin/www
 15th line in real_time_module.js
 124th line in live_chart_and_data_update.js
