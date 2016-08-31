@@ -1,4 +1,5 @@
 -----------------------------------------------------------------------------
+How do we change full mode to two mode(test mode)?
 full mode:"./javascripts/dynamic_and_static_tables_classifying.json",
 two mode:"./javascripts/dynamic_and_static_tables_classifying_test.json"
 
@@ -8,9 +9,24 @@ Change this in
 3. live_chart_and_data_update.js
 ------------------------------------------------------------------------------
 Open email mode:
-uncomment 33th line in real_time_module.js
---------------------------------------------------------------------------------
+uncomment 33th line of real_time_module.js
 
+How do we add an email address in this system?
+Add an email address on 14th line of email_system_module.js
+------------------------------------------------------------------------------
+Locations of port or url:   ex. 3006 or http://140.109.18.141:3006
+15th line in bin/www
+15th line in real_time_module.js
+124th line in live_chart_and_data_update.js
+
+
+--------------------------------------------------------------------------------
+Future work:
+1. Statistics tag in Dashboard page is static (implement real time in the future).
+2. Format of Rethinkdb configuration improvement
+3. More output formats in data query page.
+4. inspect/DB_name/table_name: attributes might be wrong sometimes.
+5. Error log about malfunction of data flow in tables.
 
 
 

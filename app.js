@@ -14,6 +14,8 @@ var tree_configuration_display = require('./routes/tree_configuration_display');
 var data_query = require('./routes/data_query');
 var dashboard = require('./routes/dashboard');
 
+var ODD = require('./module_js/ODD_BOT_module');
+ODD.BOT();
 
 var io = require('socket.io')();
 var app = express();

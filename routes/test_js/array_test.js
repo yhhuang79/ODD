@@ -143,21 +143,23 @@
 //
 
 //----------------------------------------------------------------
-var SlackBot = require('slackbots');
+// var SlackBot = require('slackbots');
+//
+// // create a bot
+// var bot = new SlackBot({
+//     token: 'xoxb-74267961879-gTkTCFvd9ymja4BdID2Vt0hU', // Add a bot https://my.slack.com/services/new/bot and put the token
+//     name: 'ODD BOT'
+// });
+//
+// bot.on('start', function() {
+//     // more information about additional params https://api.slack.com/methods/chat.postMessage
+//     var params = {
+//         icon_emoji: ':scream_cat:'
+//     };
+//
+//     console.log(bot.getUser('tinjuiho'));
 
-// create a bot
-var bot = new SlackBot({
-    token: 'xoxb-74267961879-gTkTCFvd9ymja4BdID2Vt0hU', // Add a bot https://my.slack.com/services/new/bot and put the token
-    name: 'ODD BOT'
-});
-
-bot.on('start', function() {
-    // more information about additional params https://api.slack.com/methods/chat.postMessage
-    var params = {
-        icon_emoji: ':scream_cat:'
-    };
-
-    console.log(bot.getUser('tinjuiho'));
+console.log(1=="1");
 
     // define channel, where bot exist. You can adjust it there https://my.slack.com/services
     // bot.postMessageToChannel('plash-general', 'test test 1 2 3', params);
@@ -170,25 +172,25 @@ bot.on('start', function() {
     //     {
     //         console.log(data);
     //     });
-})
+// })
 
 
-console.log(bot.getChannels());
-bot.on('message', function(data) {
-
-    var params = {
-        icon_emoji: ':scream_cat:'
-    };
-    // all ingoing events https://api.slack.com/rtm
-    if(data.text=='ODD status')
-    {
-        bot.postMessageToUser('tinjuiho', 'all tables are normal!', params);
-    }
-    else if(data.text=='123')
-    {
-        bot.postMessageToUser('tonykuo', '456', params);
-    }
-
-});
-
+// console.log(bot.getChannels());
+// bot.on('message', function(data) {
+//
+//     var params = {
+//         icon_emoji: ':scream_cat:'
+//     };
+//     // all ingoing events https://api.slack.com/rtm
+//     if(data.text=='ODD status')
+//     {
+//         bot.postMessageToUser('tinjuiho', 'all tables are normal!', params);
+//     }
+//     else if(data.text=='123')
+//     {
+//         bot.postMessageToUser('tonykuo', '456', params);
+//     }
+//
+// });
+//
 

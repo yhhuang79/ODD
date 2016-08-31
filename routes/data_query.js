@@ -6,30 +6,6 @@ var async = require('async');
 var router = express.Router();
 
 
-var SlackBot = require('slackbots');
-// create a bot
-var bot = new SlackBot({
-    token: 'xoxb-74267961879-gTkTCFvd9ymja4BdID2Vt0hU', // Add a bot https://my.slack.com/services/new/bot and put the token
-    name: 'ODD BOT'
-});
-var params = {
-    icon_emoji: ':scream_cat:'
-};
-bot.on('start', function()
-{
-    // more information about additional params https://api.slack.com/methods/chat.postMessage
-});
-bot.on('message', function(data)
-{
-    // all ingoing events https://api.slack.com/rtm
-    //console.log(data);
-    if(data.text=='ODD')
-    {
-        bot.postMessageToUser('tinjuiho', 'All tables are normal', params);
-    }
-});
-
-
 var r = require('rethinkdb');
 var rethinkdbHost = "140.109.18.136";
 var connection1=null;
