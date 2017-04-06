@@ -217,7 +217,63 @@
      "1471401008",
      "1471397407"
     ]
-   }
+  },
+  {
+   "database": "AQI_inference",
+   "table": "pm25_one_week",
+   "throw_channel_name1": "pm25_one_week",
+   "receive_channel_name": "pm25_one_week",
+   "throw_channel_name2": "/inspect/AQI_inference/pm25_one_week",
+   "documents": 912384
+  },
+  {
+   "database": "Complete_2015_data",
+   "table": "lable_data",
+   "throw_channel_name1": "lable_data",
+   "receive_channel_name": "lable_data",
+   "throw_channel_name2": "/inspect/Complete_2015_data/lable_data",
+   "documents": 157230
+  },
+  {
+   "database": "Complete_2015_data",
+   "table": "unlable_data",
+   "throw_channel_name1": "unlable_data",
+   "receive_channel_name": "unlable_data",
+   "throw_channel_name2": "/inspect/Complete_2015_data/unlable_data",
+   "documents": 0
+  },
+  {
+   "database": "Heat_Wave",
+   "table": "LASS",
+   "throw_channel_name1": "LASS",
+   "receive_channel_name": "LASS",
+   "throw_channel_name2": "/inspect/Heat_Wave/LASS",
+   "documents": 0
+  },
+  {
+   "database": "Heat_Wave",
+   "table": "LASS_API_2016_03_06",
+   "throw_channel_name1": "LASS_API_2016_03_06",
+   "receive_channel_name": "LASS_API_2016_03_06",
+   "throw_channel_name2": "/inspect/Heat_Wave/LASS_API_2016_03_06",
+   "documents": 13613534
+  },
+  {
+   "database": "Heat_Wave",
+   "table": "LASS_rawdata",
+   "throw_channel_name1": "LASS_rawdata",
+   "receive_channel_name": "LASS_rawdata",
+   "throw_channel_name2": "/inspect/Heat_Wave/LASS_rawdata",
+   "documents": 4453494
+  },
+  {
+   "database": "Heat_Wave",
+   "table": "TP_Air_Quality",
+   "throw_channel_name1": "TP_Air_Quality",
+   "receive_channel_name": "TP_Air_Quality",
+   "throw_channel_name2": "/inspect/Heat_Wave/TP_Air_Quality",
+   "documents": 72934
+  }
   ],
   "static table": [
    {

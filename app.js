@@ -22,16 +22,6 @@ var app = express();
 var real_time_listener_receiver_thrower = require("./module_js/real_time_listener_receiver_thrower");
 real_time_listener_receiver_thrower.initiate_listener();
 real_time_listener_receiver_thrower.initiate_middle_receiver_and_thrower(io);
-
-
-//var real_time_module = require("./module_js/real_time_module");
-//var io = require('socket.io')();
-// io.sockets.on('connection', function (socket) {
-//   console.log("hello!!!!!!!!!!!!!!!");
-//   real_time_module.app_js_middle_receiver_and_thrower(socket,'ODD_test_js','update_DB_data');
-// });
-
-
 app.io=io;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,23 +34,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', index);
 app.use('/dashboard',dashboard);
 app.use('/tree_configuration',tree_configuration);
 app.use('/tree_configuration_display',tree_configuration_display);
 app.use('/inspect',data_query);
-
-
-//app.use('/users', users);
-//app.use('/ODD_test',ODD_test);
-//app.use('/test_template',test_template);
-
-
-
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

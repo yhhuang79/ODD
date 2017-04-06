@@ -27,29 +27,29 @@ async.waterfall
 
             async.parallelLimit(
                 {
-                    "air quality": function(callback_parallel)
-                    {
-                        r.db('hackathon_DB').table('Parse_Log').filter({"Task_Name": "air quailty"}).orderBy(r.desc("start_epoch")).limit(5).run(connection1, function(err, cursor) {
-                            if (err) throw err;
-                            cursor.toArray(function(err, result) {
-                                if (err) throw err;
-                                //console.log(result[0]);
-                                callback_parallel(null, result);
-                            });
-                        });
-                    },
+                    //"air quality": function(callback_parallel)
+                    //{
+                        //r.db('hackathon_DB').table('Parse_Log').filter({"Task_Name": "air quailty"}).orderBy(r.desc("start_epoch")).limit(5).run(connection1, function(err, cursor) {
+                            //if (err) throw err;
+                            //cursor.toArray(function(err, result) {
+                                //if (err) throw err;
+                                ////console.log(result[0]);
+                                //callback_parallel(null, result);
+                            //});
+                        //});
+                    //},
 
-                    "vd_traffic": function(callback_parallel)
-                    {
-                        r.db('hackathon_DB').table('Parse_Log').filter({"Task_Name": "vd_traffic"}).orderBy(r.desc("start_epoch")).limit(5).run(connection1, function(err, cursor) {
-                            if (err) throw err;
-                            cursor.toArray(function(err, result) {
-                                if (err) throw err;
-                                //console.log(result[0]);
-                                callback_parallel(null, result);
-                            });
-                        });
-                    }
+                    //"vd_traffic": function(callback_parallel)
+                    //{
+                        //r.db('hackathon_DB').table('Parse_Log').filter({"Task_Name": "vd_traffic"}).orderBy(r.desc("start_epoch")).limit(5).run(connection1, function(err, cursor) {
+                            //if (err) throw err;
+                            //cursor.toArray(function(err, result) {
+                                //if (err) throw err;
+                                ////console.log(result[0]);
+                                //callback_parallel(null, result);
+                            //});
+                        //});
+                    //}
                 },1,
                 function(err, results)
                 {
